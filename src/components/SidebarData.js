@@ -1,43 +1,41 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
 
 export const SidebarData = [
     {
         title: 'Home',
         path: '/',
-        icon: <AiIcons.AiFillHome />,
+        icon: <FaIcons.FaFilm />,
         cName: 'nav-text'
     },
     {
-        title: 'Popular',
-        path: '/popular',
-        icon: <FaIcons.FaCartPlus />,
+        title: 'Upcoming',
+        path: '/upcoming',
+        icon: <FaIcons.FaRegPaperPlane />,
         cName: 'nav-text'
     },
     {
         title: 'About',
         path: '/about',
-        icon: <IoIcons.IoIosPaper />,
+        icon: <FaIcons.FaRegAddressCard />,
         cName: 'nav-text'
     },
     {
         title: 'Recommend1',
         path: '/recommend1',
-        icon: <IoIcons.IoMdPeople />,
+        icon: <FaIcons.FaRegThumbsUp />,
         cName: 'nav-text'
     },
     {
         title: 'Recommend2',
         path: '/recommend2',
-        icon: <IoIcons.IoMdPeople />,
+        icon: <FaIcons.FaRegThumbsUp />,
         cName: 'nav-text'
     },
     {
         title: 'Recommend3',
         path: '/recommend3',
-        icon: <IoIcons.IoMdPeople />,
+        icon: <FaIcons.FaRegThumbsUp />,
         cName: 'nav-text'
     }
 ]

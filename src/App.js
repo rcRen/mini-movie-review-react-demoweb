@@ -1,8 +1,8 @@
 import './App.css';
 import Navbar from './components/Navbar';
 // import Home from './pages/Home';
-import MoviePage from './pages/MoviePage';
-import Popular from './pages/Popular';
+import MovieHome from './pages/MovieHome';
+import MovieUpcoming from './pages/MovieUpcoming';
 import About from './pages/About';
 // import Profile from './pages/Profile';
 import Recommend1 from './pages/Recommend1';
@@ -21,8 +21,8 @@ function App() {
         <div class="main" className="container">
           <Routes>
             {/* <Route path="/" element={<Home />} /> */}
-            <Route path="/" element={<MoviePage />} />
-            <Route path="/popular" element={<Popular />} />
+            <Route path="/" element={<MovieHome />} />
+            <Route path="/upcoming" element={<MovieUpcoming />} />
             <Route path="/about" element={<About />} />
             {/* <Route path="/profile" element={<Profile />} /> */}
             <Route path="/recommend1" element={<Recommend1 />} />
