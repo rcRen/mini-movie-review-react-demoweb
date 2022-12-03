@@ -8,36 +8,44 @@ import {
     CDBSidebarMenuItem,
 } from 'cdbreact';
 import { NavLink } from 'react-router-dom';
+import './Sidebar.css'
 
 const Sidebar = () => {
 
     return (
         <div class="sidebar">
-            <CDBSidebar textColor="#fff" backgroundColor="#333">
+            <CDBSidebar textColor="#fff" backgroundColor="rgba(0,0,0,0.6)">
                 <CDBSidebarHeader>
                     Welcome to MoNVie!
                 </CDBSidebarHeader>
 
                 <CDBSidebarContent className="sidebar-content">
                     <CDBSidebarMenu>
-                        <NavLink exact to="/home" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="columns">Home</CDBSidebarMenuItem>
+                        <NavLink exact to="/home" className={({ isActive }) =>
+                            isActive ? "link-active" : "link-inactive"
+                        }><CDBSidebarMenuItem icon="columns">Home</CDBSidebarMenuItem>
                         </NavLink>
-                        <NavLink exact to="/popular" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="th-large">Popular</CDBSidebarMenuItem>
+                        <NavLink exact to="/popular" className={({ isActive }) =>
+                            isActive ? "link-active" : "link-inactive"
+                        }><CDBSidebarMenuItem icon="th-large">Popular</CDBSidebarMenuItem>
                         </NavLink>
-                        <NavLink exact to="/profile" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
+                        <NavLink exact to="/profile" className={({ isActive }) =>
+                            isActive ? "link-active" : "link-inactive"
+                        }><CDBSidebarMenuItem icon="user">Profile</CDBSidebarMenuItem>
                         </NavLink>
-                        <NavLink exact to="/recommend1" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="sticky-note">Recommend 1</CDBSidebarMenuItem>
+                        <NavLink exact to="/recommend1" className={({ isActive }) =>
+                            isActive ? "link-active" : "link-inactive"
+                        }><CDBSidebarMenuItem icon="sticky-note">Recommend 1</CDBSidebarMenuItem>
                         </NavLink>
-                        <NavLink exact to="/recommend2" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="sticky-note">Recommend 2</CDBSidebarMenuItem>
+                        <NavLink exact to="/recommend2" className={({ isActive }) =>
+                            isActive ? "link-active" : "link-inactive"
+                        }><CDBSidebarMenuItem icon="sticky-note">Recommend 2</CDBSidebarMenuItem>
                         </NavLink>
-                        <NavLink exact to="/recommend3" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="sticky-note">Recommend 3</CDBSidebarMenuItem>
+                        <NavLink exact to="/recommend3" className={({ isActive }) =>
+                            isActive ? "link-active" : "link-inactive"
+                        }><CDBSidebarMenuItem icon="sticky-note">Recommend 3</CDBSidebarMenuItem>
                         </NavLink>
+
                     </CDBSidebarMenu>
                 </CDBSidebarContent>
 
