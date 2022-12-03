@@ -3,7 +3,7 @@ import React from "react";
 const Recommend1 = () => {
 
     return (
-        <div>
+        <div className="recommend1">
             <h1>Recommend page 1 </h1>
         </div>
     );

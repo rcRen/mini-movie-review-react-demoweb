@@ -1,11 +1,27 @@
+@import url('http://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 20px;
-  padding: 20px;
-  text-decoration: none;
-  list-style-type: none;
-  outline: none;
-  background-color: beige;
+  background-image: url('/src/bgimg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: fixed;
+
+}
+
+.home, .popular, .about, .recommend1, .recommend2, .recommend3 {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 }
 
 .container {
@@ -15,8 +31,8 @@ body {
 
 .grid {
   display: grid;
-  margin-left: 1px;
+  margin-left: 20px;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.2rem;
+  grid-gap: 0.6rem;
   justify-content: center;
 }
