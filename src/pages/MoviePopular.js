@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import MovieBox from '../components/MovieBox';
 
-const API_URL = "https://api.themoviedb.org/3/movie/upcoming?api_key=801f3117b8bdd3cee1d9c532a1edb00e";
+const API_URL = "https://api.themoviedb.org/3/movie/top_rated?api_key=801f3117b8bdd3cee1d9c532a1edb00e";
 
-const MovieUpcoming = () => {
+const MoviePopular = () => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -24,4 +24,4 @@ const MovieUpcoming = () => {
     );
 }
 
-export default MovieUpcoming;
+export default MoviePopular;

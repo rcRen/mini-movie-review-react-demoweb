@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MovieBox from '../components/MovieBox';
 
-const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=801f3117b8bdd3cee1d9c532a1edb00e";
+const API_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=801f3117b8bdd3cee1d9c532a1edb00e";
 
 const MovieHome = () => {
     const [movies, setMovies] = useState([]);

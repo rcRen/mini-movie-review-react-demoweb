@@ -9,9 +9,9 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Upcoming',
-        path: '/upcoming',
-        icon: <FaIcons.FaRegPaperPlane />,
+        title: 'Popular',
+        path: '/popular',
+        icon: <FaIcons.FaRegHeart />,
         cName: 'nav-text'
     },
     {
