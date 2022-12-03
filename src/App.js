@@ -1,29 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Route, Routes } from "react-router-dom";
 import './App.css';
 
-import MovieBox from './components/MovieBox';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MoviePage from './pages/MoviePage';
+import Popular from './pages/Popular';
+import Profile from './pages/Profile';
+import Recommend1 from './pages/Recommend1';
+import Recommend2 from './pages/Recommend2';
+import Recommend3 from './pages/Recommend3';
+import Sidebar from './components/Sidebar';
 
-const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=801f3117b8bdd3cee1d9c532a1edb00e";
 function App() {
-
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    fetch(API_URL)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        setMovies(data.results);
-      })
-  }, [])
 
   return (
     <div class="container">
-
-      <div class="grid">
-        {movies.map((movieReq) => <MovieBox key={movieReq.id} {...movieReq} />)}
-      </div>
+      <Sidebar />
+      <Routes>
+        <Route path="/home" element={<MoviePage />} />
+        <Route path="popular" element={<Popular />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="recommend1" element={<Recommend1 />} />
+        <Route path="recommend2" element={<Recommend2 />} />
+        <Route path="recommend3" element={<Recommend3 />} />
+        {/* If route not found -> can inside/outside the Route loop */}
+        <Route path="*" element={<p>Invalid URL</p>} />
+      </Routes>
 
     </div>
   );
