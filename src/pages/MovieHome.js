@@ -17,7 +17,7 @@ const MovieHome = () => {
     }, [])
 
     return (
-        <div class="homecontainer">
+        <div>
             <Carousel />
             <div class="grid">
                 {movies.map((movieReq) => <MovieBox key={movieReq.id} {...movieReq} />)}
