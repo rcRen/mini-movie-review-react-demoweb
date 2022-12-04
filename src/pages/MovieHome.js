@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MovieBox from '../components/MovieBox';
+import Carousel from '../components/Carousel';
 
 const API_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=801f3117b8bdd3cee1d9c532a1edb00e";
 
@@ -16,7 +17,8 @@ const MovieHome = () => {
     }, [])
 
     return (
-        <div class="container">
+        <div class="homecontainer">
+            <Carousel />
             <div class="grid">
                 {movies.map((movieReq) => <MovieBox key={movieReq.id} {...movieReq} />)}
             </div>
