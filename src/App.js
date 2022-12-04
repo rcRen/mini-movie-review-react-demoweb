@@ -1,6 +1,6 @@
 import './App.css';
+import Header from './components/Header'
 import Navbar from './components/Navbar';
-// import Home from './pages/Home';
 import MovieHome from './pages/MovieHome';
 import MoviePopular from './pages/MoviePopular';
 import About from './pages/About';
@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <>
+    <Header />
       <Router>
         <Navbar />
         <div class="main" className="container">

@@ -1,5 +1,4 @@
 .box {
-    margin-top: 100px;
     display: grid;
     grid-template-columns: 82%;
     grid-template-rows: 60%;
