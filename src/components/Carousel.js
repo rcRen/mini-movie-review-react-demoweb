@@ -12,7 +12,7 @@ function UncontrolledExample() {
                         alt=""
                     />
                     <Carousel.Caption>
-                        <h3>Lyle, Lyle, Crocodile</h3>
+                        <h3 style={{fontSize:"1.5rem"}}>Lyle, Lyle, Crocodile</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={3000}>
@@ -22,7 +22,7 @@ function UncontrolledExample() {
                         alt=""
                     />
                     <Carousel.Caption>
-                        <h3>Black Panther: Wakanda Forever</h3>
+                        <h3 style={{fontSize:"1.5rem"}}>Black Panther: Wakanda Forever</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={3000}>
@@ -32,7 +32,7 @@ function UncontrolledExample() {
                         alt=""
                     />
                     <Carousel.Caption>
-                        <h3>The Minute You Wake Up Dead</h3>
+                        <h3 style={{fontSize:"1.5rem"}}>The Minute You Wake Up Dead</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

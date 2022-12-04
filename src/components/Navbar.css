@@ -1,4 +1,4 @@
-.navbar {
+.navbar, .navbar-toggle{
     height: 0%;
     display: flex;
     justify-content: flex-start;
@@ -30,12 +30,13 @@
 .nav-text a {
     text-decoration: none;
     color: white;
-    padding-left: 1rem;
-    width: 80%;
+    width: 90%;
     height: 100%; 
     display: flex;
     align-items: center;
-    border-radius: 4px;;
+    border-radius: 4px;
+    padding-left: 0.3rem;
+
 }
 
 .nav-text a:hover {
@@ -56,4 +57,5 @@ span {
     height: 80%;
     background-color:white;
     padding: 8%;
+    
 }
