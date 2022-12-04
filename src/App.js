@@ -16,7 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <>
-    <Header />
+      <Header />
       <Router>
         <Navbar />
         <div class="main" className="container">
@@ -29,12 +29,9 @@ function App() {
             <Route path="/recommend1" element={<Recommend1 />} />
             <Route path="/recommend2" element={<Recommend2 />} />
             <Route path="/recommend3" element={<Recommend3 />} />
-
           </Routes>
         </div>
       </Router>
-
-
     </>
   );
 }
