@@ -32,7 +32,7 @@ function Navbar() {
                                     position: 'absolute', 
                                     bottom: '0', 
                                     paddingLeft: "8%", 
-                                    color: 'white' }}>Copyright&copy; - Team BK
+                                    color: 'white' }}>Copyright &copy; — Team BK
                         </p>
                     </ul>
                 </nav>
