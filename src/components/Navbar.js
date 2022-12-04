@@ -30,9 +30,17 @@ function Navbar() {
                         <p></p>
                         <p style={{ fontSize: '15px',   
                                     position: 'absolute', 
+                                    left: '0',
+                                    bottom: '5%',
+                                    paddingLeft: "8%", 
+                                    color: 'white' }}>Copyright &copy;
+                        </p>
+                        <p style={{ fontSize: '15px',   
+                                    position: 'absolute', 
+                                    left: '0',
                                     bottom: '0', 
                                     paddingLeft: "8%", 
-                                    color: 'white' }}>Copyright &copy; — Team BK
+                                    color: 'white' }}>Team BK
                         </p>
                     </ul>
                 </nav>

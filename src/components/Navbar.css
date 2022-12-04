@@ -1,53 +1,40 @@
 .navbar {
-    height: 80px;
+    height: 0%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 .menu-bars {
-    margin-left: 2rem;
-    font-size: 25px;
-    background: none;
-    
+    display: absolute;
 }
 
 .nav-menu {
     background-color: #060b26;
-    margin-left: -10px;
-    width: 240px;
-    height: 100vh;
-    font-size: 100px;
+    width: 20%;
+    height: 100%;
+    font-size: 1rem;
     justify-content: flex-start;
     position: fixed;
     top: 0;
-    left: -100%;
-    transition: 850ms;
-}
-
-.nav-menu.active {
-    left: 0;
-    transition: 350ms;
 }
 
 .nav-text {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 8px 0px 8px 0;
     list-style: none;
-    height: 60px;
+    height: 8vh;
 }
 
 .nav-text a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
-    width: 95%;
+    padding-left: 1rem;
+    width: 80%;
     height: 100%; 
     display: flex;
     align-items: center;
-    padding: 0 16px;
     border-radius: 4px;;
 }
 
@@ -60,22 +47,13 @@
     width: 100%;
 }
 
-.nav-toggle {
-    background-color: #060b26;
-    width: 00%;
-    height: 80px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
 span {
-    margin-left: 16px;
+    margin-left: 6px;
 } 
 
 #logo {
-    width: 120px;
-    height: 120px;
+    width: 80%;
+    height: 80%;
     background-color:white;
-    padding: 10px;
+    padding: 8%;
 }
