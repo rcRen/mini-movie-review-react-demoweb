@@ -16,27 +16,27 @@ import RegisterLoginPage from './pages/RegisterLoginPage';
 
 function App() {
   return (
-    <div>
-      <RegisterLoginPage/>
-    </div>
-    // <>
-    //   <Header />
-    //   <Router>
-    //     <Navbar />
-    //     <div class="main" className="container">
-    //       <Routes>
-    //         {/* <Route path="/" element={<Home />} /> */}
-    //         <Route path="/" element={<MovieHome />} />
-    //         <Route path="/popular" element={<MoviePopular />} />
-    //         <Route path="/about" element={<About />} />
-    //         {/* <Route path="/profile" element={isLogin ? <Profile />} : '' /> */}
-    //         <Route path="/recommend1" element={<Recommend1 />} />
-    //         <Route path="/recommend2" element={<Recommend2 />} />
-    //         <Route path="/recommend3" element={<Recommend3 />} />
-    //       </Routes>
-    //     </div>
-    //   </Router>
-    // </>
+    // <div>
+    //   <RegisterLoginPage/>
+    // </div>
+    <>
+      <Header />
+      <Router>
+        <Navbar />
+        <div class="main" className="container">
+          <Routes>
+            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<MovieHome />} />
+            <Route path="/popular" element={<MoviePopular />} />
+            <Route path="/about" element={<About />} />
+            {/* <Route path="/profile" element={isLogin ? <Profile />} : '' /> */}
+            <Route path="/recommend1" element={<Recommend1 />} />
+            <Route path="/recommend2" element={<Recommend2 />} />
+            <Route path="/recommend3" element={<Recommend3 />} />
+          </Routes>
+        </div>
+      </Router>
+    </>
   );
 }
 
