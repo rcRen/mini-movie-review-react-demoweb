@@ -1,12 +1,12 @@
 import React from 'react'
 import './MyCard.css';
 
-function Card(props) {
+function MyCard(props) {
   return (
-    <div className={`card ${props.className}`}>
+    <div className={`card ${props.className}`} style={props.style} >
         {props.children}
     </div>
   )
 }
 
-export default Card
+export default MyCard
