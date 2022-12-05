@@ -7,7 +7,7 @@ function SearchBar(options) {
 
   const handleSubmit = (event) => {
     event.preventDefault(); // prevent page reload
-    fetch("https://api.themoviedb.org/3/search/keyword", {
+    fetch("https://api.themoviedb.org/3/search/movie", {
       method: "POST",
 
       body: JSON.stringify({
@@ -28,7 +28,13 @@ function SearchBar(options) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Form.Control type="text" ref={searchValueRef} placeholder="Movie Name" />
+      <Form.Control
+        type="text"
+        ref={searchValueRef}
+        placeholder="Movie Name"
+        className="me-2"
+        style={{ maxHeight: "100px" }}
+      />
 
       <Button variant="primary" type="submit">
         Submit
