@@ -12,31 +12,33 @@ import Recommend3 from './pages/Recommend3';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import RegisterLoginPage from './pages/RegisterLoginPage';
+import LoginButtton from './components/LoginButtton';
+import RegisterButton from './components/RegisterButton';
 
 
 function App() {
   return (
-    <div>
-      <RegisterLoginPage/>
-    </div>
-    // <>
-    //   <Header />
-    //   <Router>
-    //     <Navbar />
-    //     <div class="main" className="container">
-    //       <Routes>
-    //         {/* <Route path="/" element={<Home />} /> */}
-    //         <Route path="/" element={<MovieHome />} />
-    //         <Route path="/popular" element={<MoviePopular />} />
-    //         <Route path="/about" element={<About />} />
-    //         {/* <Route path="/profile" element={isLogin ? <Profile />} : '' /> */}
-    //         <Route path="/recommend1" element={<Recommend1 />} />
-    //         <Route path="/recommend2" element={<Recommend2 />} />
-    //         <Route path="/recommend3" element={<Recommend3 />} />
-    //       </Routes>
-    //     </div>
-    //   </Router>
-    // </>
+  // <>
+  // <RegisterButton/>
+  // </>
+    <>
+      <Header />
+      <Router>
+        <Navbar />
+        <div class="main" className="container">
+          <Routes>
+            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<MovieHome />} />
+            <Route path="/popular" element={<MoviePopular />} />
+            <Route path="/about" element={<About />} />
+            {/* <Route path="/profile" element={isLogin ? <Profile />} : '' /> */}
+            <Route path="/recommend1" element={<Recommend1 />} />
+            <Route path="/recommend2" element={<Recommend2 />} />
+            <Route path="/recommend3" element={<Recommend3 />} />
+          </Routes>
+        </div>
+      </Router>
+    </>
   );
 }
 

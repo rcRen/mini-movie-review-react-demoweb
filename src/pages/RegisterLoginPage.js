@@ -22,7 +22,7 @@ function RegisterLoginPage() {
         <Col xs={12} sm={12} md={6} lg={6}>
           <MyCard style = {{height:'550px'}}>
             <Tabs
-              defaultActiveKey="login"
+              defaultActiveKey="Register"
               id="justify-tab-example"
               className="mx-3 mb-3"
               justify>

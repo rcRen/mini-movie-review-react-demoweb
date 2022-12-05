@@ -26,7 +26,7 @@ function LoginForm() {
     }
 
     return (
-        <div>
+        <>
             <Form onSubmit={handleSubmit}>
                 <div style={{paddingBottom:"150px"}}>
                     <Form.Group className='mx-3 my-5 ' controlId="formBasicEmail">
@@ -43,7 +43,7 @@ function LoginForm() {
                     Login
                 </MyButton> */}
             </Form>
-        </div>
+        </>
     )
 }
 

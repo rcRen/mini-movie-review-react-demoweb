@@ -37,7 +37,7 @@ function RegisterForm() {
   }
 
   return (
-    <div>
+    <>
       <Form onSubmit={handleSubmit}>
         {/* <Form.Group className='mb-5'>
           <Form.Text>{errorMsg}</Form.Text>
@@ -62,7 +62,7 @@ function RegisterForm() {
           Register
         </MyButton> */}
       </Form>
-    </div>
+    </>
   )
 }
 
