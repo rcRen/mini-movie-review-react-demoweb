@@ -13,9 +13,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import RegisterLoginPage from "./pages/RegisterLoginPage";
 
-function App() {
+function App(props) {
   return (
     <>
+      {props.children}
       <Header />
       <Router>
         <Navbar />
