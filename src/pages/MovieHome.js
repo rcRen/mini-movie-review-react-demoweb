@@ -18,9 +18,8 @@ const MovieHome = () => {
 
     return (
         <>
-        
             <div className="container" style={{ width: '80%', marginLeft: '18%' }}>
-                <div class="main-carousel" style={{width: '90%', marginLeft: '10%'}}>
+                <div class="main-carousel" style={{ width: '90%', marginLeft: '10%' }}>
                     <MainCarousel />
                 </div>
                 <div className="grid">
