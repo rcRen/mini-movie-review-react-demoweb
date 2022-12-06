@@ -16,11 +16,13 @@ const MoviePopular = () => {
     }, [])
 
     return (
-        <div class="container">
-            <div class="grid">
-                {movies.map((movieReq) => <MovieBox key={movieReq.id} {...movieReq} />)}
+        <>
+            <div className="container" style={{ width: '80%', marginLeft: '18%' }}>
+                <div className="grid">
+                    {movies.map((movieReq) => <MovieBox key={movieReq.id} {...movieReq} />)}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

@@ -1,6 +1,10 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header'
-import Navbar from './components/Navbar';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 import MovieHome from './pages/MovieHome';
 import MoviePopular from './pages/MoviePopular';
 import About from './pages/About';
@@ -8,27 +12,22 @@ import About from './pages/About';
 import Recommend1 from './pages/Recommend1';
 import Recommend2 from './pages/Recommend2';
 import Recommend3 from './pages/Recommend3';
-import UserPage from './pages/UserPage';
 
-
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import RegisterLoginPage from './pages/RegisterLoginPage';
 import MyReview from './components/MyReview';
 
-
 function App() {
+
   return (
-    //<div>
-    //<RegisterLoginPage />
-    //</div>
-    <BrowserRouter>
-
-
+    // <div>
+    //   <RegisterLoginPage/>
+    // </div>
+    <>
       <Header />
-      <Navbar />
-      <MyReview />
       <Router>
+        <Navbar />
         <div class="main" className="container">
           <Routes>
             {/* <Route path="/" element={<Home />} /> */}

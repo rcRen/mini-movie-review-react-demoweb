@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import { IconContext } from 'react-icons';
 
-import './Navbar.css';
+import './Sidebar.css';
 
-function Navbar() {
+function Sidebar() {
 
     return (
         <>
@@ -27,20 +27,9 @@ function Navbar() {
                                 </li>
                             )
                         })}
-                        <p></p>
-                        <p style={{ fontSize: '15px',   
-                                    position: 'absolute', 
-                                    left: '0',
-                                    bottom: '5%',
-                                    paddingLeft: "8%", 
-                                    color: 'white' }}>Copyright &copy;
-                        </p>
-                        <p style={{ fontSize: '15px',   
-                                    position: 'absolute', 
-                                    left: '0',
-                                    bottom: '0', 
-                                    paddingLeft: "8%", 
-                                    color: 'white' }}>Team BK
+                        <hr style={{ width: "80%"}}></hr>
+                        <p style={{ fontSize: '15px', 
+                                    color: 'white' }}>Copyright &copy;  Team BK
                         </p>
                     </ul>
                 </nav>
@@ -49,4 +38,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Sidebar;
