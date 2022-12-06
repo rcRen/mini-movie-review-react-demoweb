@@ -4,7 +4,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCar
 
 const Movie3 = () => {
     return (
-        <div className="container" style={{ width: '120%', marginLeft: '20%' }}>
+        <div className="container" style={{ width: '80%', marginLeft: '20%' }}>
             <MDBContainer className="py-5 h-100">
                 <MDBRow className="justify-content-center align-items-center h-100">
                     <MDBCol lg="9" xl="7">
