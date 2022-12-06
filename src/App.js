@@ -9,6 +9,9 @@ import MovieHome from './pages/MovieHome';
 import MoviePopular from './pages/MoviePopular';
 import About from './pages/About';
 import Movie1 from './pages/Movie1';
+import Movie2 from './pages/Movie2';
+import Movie3 from './pages/Movie3';
+
 
 import RegisterLoginPage from './pages/RegisterLoginPage';
 
@@ -28,6 +31,8 @@ function App() {
           <Route path="/about" element={<About />} />
           {/* <Route path="/profile" element={isLogin ? <Profile />} : '' /> */}
           <Route path="/movie1" element={<Movie1 />} />
+          <Route path="/movie2" element={<Movie2 />} />
+          <Route path="/movie3" element={<Movie3 />} />
         </Routes>
       </Router>
     </>

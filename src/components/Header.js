@@ -4,7 +4,7 @@ import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstr
 
 function Header() {
     return (
-        <Navbar expand='lg' style={{ marginTop: '2%', marginRight: '2%', marginBottom: '4%' }}>
+        <Navbar expand='lg' style={{ marginTop: '2%', marginRight: '2%' }}>
             <Container fluid>
                 <Navbar.Brand href='#'></Navbar.Brand>
                 {/* <Navbar.Toggle aria-controls='navbarScroll'></Navbar.Toggle>
