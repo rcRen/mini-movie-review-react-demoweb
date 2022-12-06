@@ -8,59 +8,59 @@ function Sidebar() {
 
     return (
         <>
-            <nav className='nav-menu active'>
-                <ul className="nav-menu-items">
-                    <li className="navbar-toggle">
-                        <Link to="/" className="menu-bars">
+            <nav className='nav-menu'>
+                <ul>
+                    <li className="navbar-button">
+                        <Link to="/">
                             <img src="logo.png" alt="logo" id="logo"></img>
                         </Link>
                     </li>
-                    <li className="navbar-toggle">
+                    <li className="navbar-button">
                         <Link to="/" >
                             <Button variant='outline-info' className="nav-text">
                                 Home
                             </Button>
                         </Link>
                     </li>
-                    <li className="navbar-toggle">
+                    <li className="navbar-button">
                         <Link to="/popular">
                             <Button variant='outline-info' className="nav-text">
                                 Popular
                             </Button>
                         </Link>
                     </li>
-                    <li className="navbar-toggle">
+                    <li className="navbar-button">
                         <Link to="/about">
                             <Button variant='outline-info' className="nav-text">
                                 About
                             </Button>
                         </Link>
                     </li>
-                    <li className="navbar-toggle">
+                    <li className="navbar-button">
                         <Link to="/movie1">
                             <Button variant='outline-info' className="nav-text">
                                 Recommend1
                             </Button>
                         </Link>
                     </li>
-                    <li className="navbar-toggle">
+                    <li className="navbar-button">
                         <Link to="/movie2">
                             <Button variant='outline-info' className="nav-text">
                                 Recommend2
                             </Button>
                         </Link>
                     </li>
-                    <li className="navbar-toggle">
+                    <li className="navbar-button">
                         <Link to="/movie3">
                             <Button variant='outline-info' className="nav-text">
                                 Recommend3
                             </Button>
                         </Link>
                     </li>
-                    <hr style={{ width: "80%" }}></hr>
+                    <hr style={{ width: "70%" }}></hr>
                     <p style={{
                         fontSize: '1vw',
-                        color: 'white'
+                        color: 'beige'
                     }}>Copyright &copy;  Team BK
                     </p>
                 </ul>

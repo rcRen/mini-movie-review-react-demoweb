@@ -1,31 +1,38 @@
-.navbar, .navbar-toggle{
-    height: 0%;
+.nav-menu {
+    font-size: 1.2vw;
+    width: 20vw;
+    height: 100%;
+    /* position: flex;   */
+    
+}
+
+.navbar-button{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
-
-.nav-menu {
-    font-size: 1.2vw;
-    width: 20%;
-    height: 100%;
-    position: flex;  
+    list-style: none;
+    border-radius: 1vw;
+    width: 12vw;
+    margin-bottom: 5%;
 }
 
 .nav-text {
     align-items: center;
     list-style: none;
     color: beige;
-    font-size: 1.5vw;
-    border: 1px solid beige;
     border-radius: 1vw;
     width: 12vw;
     margin-bottom: 5%;
+    border: 1px solid beige;
+    font-size: 1.5vw;
+   
 }
 
 #logo {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     background-color:beige;
     padding: 6%;  
     margin-bottom: 20%;
