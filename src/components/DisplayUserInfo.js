@@ -8,6 +8,11 @@ const DisplayUserInfo = () => {
 
   return (
     <Container>
+        <Row  className="profilePic">
+          <Col>
+          <img src={require('../images/person.png')} />
+          </Col>
+        </Row>
         <Row className="profileContainer">
           <Col md={6}>
             <Form>

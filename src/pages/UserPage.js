@@ -10,7 +10,7 @@ const UserPage = () => {
     <Container>
             <Row  className="profilePic">
           <Col>
-          <img src={require('../images/person.png')} style={{ width: 75, height: 'auto' }} />
+          <img src={require('../images/person.png')} />
           </Col>
         </Row>
         <Row className="profileContainer">
