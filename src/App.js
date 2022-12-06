@@ -18,6 +18,7 @@ import RegisterLoginPage from "./pages/RegisterLoginPage";
 import { StarRating } from "./components/StarRating";
 import AddReviewButton from "./components/AddReviewButton";
 import MyReviewButton from "./components/MyReviewButton";
+import SearchHome from "./pages/SearchHome";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -35,10 +36,11 @@ function App() {
   return (
     <>
       <div className={`App ${theme}`}>
-        <Header />
-        <button onClick={toggleTheme}>Toggle Theme</button>
-        <StarRating />
         <Router>
+          <Header />
+          <button onClick={toggleTheme}>Toggle Theme</button>
+          <StarRating />
+
           <AddReviewButton />
           {/* <MyReviewButton /> */}
           <Navbar />
@@ -54,6 +56,7 @@ function App() {
               <Route path="/recommend3" element={<Recommend3 />} />
               <Route path="/addreview" element={<AddReview />} />
               <Route path="/myreview" element={<MyReview />} />
+              <Route path="/searchhome" element={<SearchHome />} />
             </Routes>
           </div>
         </Router>
