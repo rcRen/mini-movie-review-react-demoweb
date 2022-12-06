@@ -1,5 +1,4 @@
 import React from "react";
-import "./AvatarIcon.css";
 import { Button } from 'react-bootstrap'
 import { useNavigate } from "react-router-dom";
 
