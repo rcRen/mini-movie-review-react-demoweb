@@ -39,21 +39,21 @@ function Sidebar() {
                     <li className="navbar-toggle">
                         <Link to="/movie1">
                             <Button variant='outline-info' className="nav-text">
-                                Movie1
+                                Recommend1
                             </Button>
                         </Link>
                     </li>
                     <li className="navbar-toggle">
                         <Link to="/movie2">
                             <Button variant='outline-info' className="nav-text">
-                                Movie2
+                                Recommend2
                             </Button>
                         </Link>
                     </li>
                     <li className="navbar-toggle">
                         <Link to="/movie3">
                             <Button variant='outline-info' className="nav-text">
-                                Movie3
+                                Recommend3
                             </Button>
                         </Link>
                     </li>
