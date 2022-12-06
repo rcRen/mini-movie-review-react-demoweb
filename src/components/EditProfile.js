@@ -4,15 +4,10 @@ import "./UserPage.css";
 
 
 
-const UserPage = () => {
+const EditProfile = () => {
 
   return (
     <Container>
-            <Row  className="profilePic">
-          <Col>
-          <img src={require('../images/person.png')} style={{ width: 75, height: 'auto' }} />
-          </Col>
-        </Row>
         <Row className="profileContainer">
           <Col md={6}>
             <Form>
@@ -67,4 +62,4 @@ const UserPage = () => {
   );
 };
 
-export default UserPage;
+export default EditProfile;
