@@ -13,8 +13,6 @@ import Movie2 from './pages/Movie2';
 import Movie3 from './pages/Movie3';
 
 
-import RegisterLoginPage from './pages/RegisterLoginPage';
-
 function App() {
 
   return (
