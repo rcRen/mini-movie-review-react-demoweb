@@ -10,7 +10,6 @@
 }
 
 .nav-menu {
-    /* background-color: #060b26; */
     font-size: 2.5vh;
     width: 20%;
     height: 90%;
@@ -64,5 +63,6 @@ span {
     width: 80%;
     height: 80%;
     background-color:white;
-    padding: 8%;  
+    padding: 6%;  
+    margin: -15% 0 15% 0;
 }

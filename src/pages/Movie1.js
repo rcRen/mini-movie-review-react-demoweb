@@ -1,15 +1,15 @@
 import React from 'react';
 
-function About() {
+function Movie1() {
     return (
         <>
             <div className="container" style={{ width: '80%', marginLeft: '18%' }}>
-                <div className="about">
-                    About Us
+                <div className="movie1">
+                    Movie 1
                 </div>
             </div>
         </>
     )
 }
 
-export default About;
+export default Movie1;

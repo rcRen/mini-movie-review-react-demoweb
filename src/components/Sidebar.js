@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import { IconContext } from 'react-icons';
 
-import './Navbar.css';
+import './Sidebar.css';
 
-function Navbar() {
+function Sidebar() {
 
     return (
         <>
@@ -38,4 +38,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Sidebar;

@@ -22,19 +22,19 @@ export const SidebarData = [
     },
     {
         title: 'Movie1',
-        path: '/recommend1',
+        path: '/movie1',
         icon: <FaIcons.FaRegThumbsUp />,
         cName: 'nav-text'
     },
     {
         title: 'Movie2',
-        path: '/recommend2',
+        path: '/movie2',
         icon: <FaIcons.FaRegThumbsUp />,
         cName: 'nav-text'
     },
     {
         title: 'Movie3',
-        path: '/recommend3',
+        path: '/movie3',
         icon: <FaIcons.FaRegThumbsUp />,
         cName: 'nav-text'
     }
