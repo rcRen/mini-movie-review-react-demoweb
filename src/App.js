@@ -40,7 +40,7 @@ function App() {
           <Header />
           <button onClick={toggleTheme}>Toggle Theme</button>
           <AddReviewButton />
-          {/* <MyReviewButton /> */}
+          <MyReviewButton />
           <Navbar />
           <div class="main" className="container">
             <Routes>

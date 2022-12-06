@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Rating } from "react-simple-star-rating";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import moment from "moment";
+import { NavDropdown } from "react-bootstrap";
+import { format } from "date-fns";
 
 function AddReviewForm() {
   // const [isLoggedIn, setIsLoggedIn] = React.useContext(LoggedInContext);
@@ -25,6 +28,11 @@ function AddReviewForm() {
   const onPointerLeave = () => console.log("Leave");
   const onPointerMove = (value, index) => console.log(value, index);
 
+  const [updateDate, setUpdateDate] = useState();
+  useEffect(() => {
+    setUpdateDate(moment().format("DD-MM-YYYY hh:mm:ss a"));
+  }, []);
+  console.log(updateDate);
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch("http://localhost:3001/addreview", {
@@ -33,7 +41,7 @@ function AddReviewForm() {
         movieId: movieId,
         userId: userId,
         username: username,
-        updateDate: Date(),
+        updateDate: updateDate,
         rate: rating,
         // content: [
         //   {

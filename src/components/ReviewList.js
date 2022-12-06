@@ -1,14 +1,25 @@
-import { useEffect, useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import "../App.css";
 function ReviewList() {
   const [data, setData] = useState([]);
+  const [userId, setUserId] = useState(
+    localStorage.getItem("userId") || "1234"
+  );
 
   const fetchData = () => {
-    fetch(`http://localhost:3001/CommentRecord`)
+    fetch("http://localhost:3001/commandreviews/get", {
+      method: "POST",
+      body: JSON.stringify({
+        userId: userId,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
       .then((response) => response.json())
       .then((actualData) => {
         console.log(actualData);
-        setData(actualData.products);
+        setData(actualData);
         console.log(data);
       })
       .catch((err) => {
