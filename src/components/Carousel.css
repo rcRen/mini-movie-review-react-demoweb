@@ -1,8 +1,6 @@
 .box {
-    display: grid;
-    grid-template-columns: 82%;
-    grid-template-rows: 60%;
-    justify-content: right;
+    display: grid; 
+    margin-left: 17.5%;
 }
 
 img {

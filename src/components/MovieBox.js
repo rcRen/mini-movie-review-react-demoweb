@@ -12,15 +12,15 @@ const MovieBox = ({ title, poster_path, vote_average, release_date, overview }) 
     return (
         <div className='card text-center bg-secondary mb-3'>
             <div className='card-body' 
-                 style={{padding:"0 10px"}}>
+                 style={{padding:"0 5%"}}>
                 <img className='card-img' 
                      style={{height:'70%', width:'100%'}} 
                      src={API_IMG + poster_path} alt="img">
                 </img>
                 <div className='card-body'>
                     <button type="button" 
-                            style={{height:'15%', width:'70%', position: 'absolute', bottom:'5%', left:'15%'}} 
-                            className="btn btn-dark" onClick={handleShow}>View
+                            style={{height:'15%', width:'70%', fontSize:'2.3vh', position: 'absolute', bottom:'5%', left:'15%'}} 
+                            className="btn btn-dark" onClick={handleShow}>View Movie
                     </button>
                     <Modal show={show} onHide={handleClose} >
                         <Modal.Header closeButton>

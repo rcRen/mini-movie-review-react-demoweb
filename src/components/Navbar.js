@@ -27,20 +27,9 @@ function Navbar() {
                                 </li>
                             )
                         })}
-                        <p></p>
-                        <p style={{ fontSize: '15px',   
-                                    position: 'absolute', 
-                                    left: '0',
-                                    bottom: '5%',
-                                    paddingLeft: "8%", 
-                                    color: 'white' }}>Copyright &copy;
-                        </p>
-                        <p style={{ fontSize: '15px',   
-                                    position: 'absolute', 
-                                    left: '0',
-                                    bottom: '0', 
-                                    paddingLeft: "8%", 
-                                    color: 'white' }}>Team BK
+                        <hr style={{ width: "80%"}}></hr>
+                        <p style={{ fontSize: '15px', 
+                                    color: 'white' }}>Copyright &copy;  Team BK
                         </p>
                     </ul>
                 </nav>

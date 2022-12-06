@@ -10,13 +10,17 @@
 }
 
 .nav-menu {
-    background-color: #060b26;
+    /* background-color: #060b26; */
+    font-size: 2.5vh;
     width: 20%;
-    height: 100%;
-    font-size: 1rem;
-    justify-content: flex-start;
-    position: fixed;
-    top: 0;
+    height: 90%;
+    position: flex;
+    /* position: fixed;
+    top: 5%;
+    left: 2%; */
+    
+    /* justify-content: flex-start; */
+    
 }
 
 .nav-text {
@@ -24,24 +28,28 @@
     justify-content: flex-start;
     align-items: center;
     list-style: none;
-    height: 8vh;
+    height: 7vh;
+    border: 1px solid beige;
+    border-radius: 20px;
+    width: 80%;
+    margin: 3% 0;
 }
 
 .nav-text a {
     text-decoration: none;
     color: white;
-    width: 90%;
     height: 100%; 
     display: flex;
     align-items: center;
-    border-radius: 4px;
-    padding-left: 0.3rem;
+    padding-left: 1rem;
 
 }
 
 .nav-text a:hover {
     background-color: #1a83ff;
     color: black;
+    width: 100%;
+    border-radius: 20px;
 }
 
 .nav-menu-items {
@@ -56,6 +64,5 @@ span {
     width: 80%;
     height: 80%;
     background-color:white;
-    padding: 8%;
-    
+    padding: 8%;  
 }
