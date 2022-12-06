@@ -1,19 +1,17 @@
 import React from 'react';
 import { Col, Container, Row, Tabs, Tab } from 'react-bootstrap';
 // import './UpdatePassword.css';
-import Navbar from '../components/Navbar';
-import Header from '../components/Header';
+// import Header from '../components/Header';
 import ChangePasswordForm from '../components/ChangePasswordForm';
 import MyCard from '../components/UI/MyCard';
 
 function UpdatePassword() {
 	return (
 		<>
-			<Header />
-			<Navbar />
-            <MyCard>
-            <ChangePasswordForm/>
-            </MyCard>
+			{/* <Header /> */}
+			<MyCard>
+				<ChangePasswordForm />
+			</MyCard>
 		</>
 		//     <Container className='test-border mt-3'>
 		//     <Row>

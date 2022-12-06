@@ -1,14 +1,9 @@
 import React from 'react';
 import { User } from '../helpers/LocalStorage';
-
-import './Header.css';
 import RegisterButton from './RegisterButton';
 import LoginButton from './LoginButtton';
 import LogoutButton from './LogoutButton';
-import React from 'react';
 import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
-
-
 
 function Header() {
     return (
