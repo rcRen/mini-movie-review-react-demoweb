@@ -38,22 +38,22 @@ function Sidebar() {
                     </li>
                     <li className="navbar-button">
                         <Link to="/movie1">
-                            <Button variant='outline-info' className="nav-text">
-                                Recommend1
+                            <Button className="nav-text" style={{ backgroundImage: "url('naruto.png')", backgroundSize: "cover" }}>
+                                &nbsp;
                             </Button>
                         </Link>
                     </li>
                     <li className="navbar-button">
                         <Link to="/movie2">
-                            <Button variant='outline-info' className="nav-text">
-                                Recommend2
+                            <Button className="nav-text" style={{ backgroundImage: "url('mulholland_drive.jpeg')", backgroundSize: "cover" }}>
+                                &nbsp;
                             </Button>
                         </Link>
                     </li>
                     <li className="navbar-button">
                         <Link to="/movie3">
-                            <Button variant='outline-info' className="nav-text">
-                                Recommend3
+                            <Button className="nav-text" style={{ backgroundImage: "url('avatar.jpg')", backgroundSize: "cover" }}>
+                                &nbsp;
                             </Button>
                         </Link>
                     </li>

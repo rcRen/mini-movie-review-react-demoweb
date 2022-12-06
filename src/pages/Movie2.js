@@ -23,7 +23,7 @@ const Movie2 = () => {
                             <p></p>
                             <MDBCardBody className="text-black p-4">
                                 <div className="mb-5">
-                                    <p className="lead fw-normal mb-1">Overview</p>
+                                    <p className="lead fw-normal mb-1" style={{paddingTop:'5%'}}>Overview</p>
                                     <div className="p-4" style={{ backgroundColor: '#f8f9fa' }}>
                                         <MDBCardText className="font-italic mb-1">
                                         Blonde Betty Elms has only just arrived in Hollywood to become a movie star when she meets an enigmatic brunette with amnesia. Meanwhile, as the two set off to solve the second woman's identity, filmmaker Adam Kesher runs into ominous trouble while casting his latest project.
