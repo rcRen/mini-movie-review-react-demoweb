@@ -1,9 +1,9 @@
 .main-carousel {
     display: grid; 
-    height: 300px;
+    height: 270px;
 }
 
 img {
-    height: 220px;
+    max-height: 230px;
     margin: 1rem auto;
 }

@@ -28,7 +28,7 @@ function Sidebar() {
                             )
                         })}
                         <hr style={{ width: "80%"}}></hr>
-                        <p style={{ fontSize: '15px', 
+                        <p style={{ fontSize: '1vw', 
                                     color: 'white' }}>Copyright &copy;  Team BK
                         </p>
                     </ul>
