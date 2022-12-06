@@ -11,6 +11,7 @@ import {
 import "./Header.css";
 import SearchBar from "./SearchBar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ThemeButton from "./ThemeButton";
 
 const Header = () => {
   const API_SEARCH =
@@ -46,6 +47,7 @@ const Header = () => {
         <Container fluid>
           <Navbar.Brand href="">Welcome</Navbar.Brand>
           <Navbar.Brand href="">Trending</Navbar.Brand>
+          {/* <ThemeButton /> */}
           <Navbar.Toggle aria-controls="navbarScroll"> </Navbar.Toggle>
           <Navbar.Collapse id="nabarScroll">
             <Nav
