@@ -9,15 +9,15 @@ const Movie3 = () => {
                 <MDBRow className="justify-content-center align-items-center h-100">
                     <MDBCol lg="9" xl="7">
                         <MDBCard>
-                            <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '200px' }}>
+                            <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '250px' }}>
                                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
                                     <MDBCardImage src="https://image.tmdb.org/t/p/w500/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg"
                                         alt="Avatar: The Way of Water image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
                                 </div>
                                 <div className="ms-3" style={{ marginTop: '75px' }}>
-                                    <MDBTypography tag="h5" style={{ fontSize: '2vw' }}>Avatar: The Way of Water</MDBTypography>
-                                    <MDBTypography tag="h6" style={{ fontSize: '1.5vw' }}>James Cameron</MDBTypography>
-                                    <MDBCardText style={{ fontSize: '1.5vw', paddingTop: '5%' }}>English |<span style={{ paddingLeft: '5px' }}>2022-12-16 |</span><span style={{ paddingLeft: '5px' }}>IMDb: Not Released</span></MDBCardText>
+                                    <MDBTypography tag="h3">Avatar: The Way of Water</MDBTypography>
+                                    <MDBTypography tag="h6">James Cameron</MDBTypography>
+                                    <MDBTypography tag="h6" style={{paddingTop:'10px'}}>English |<span style={{ paddingLeft: '5px' }}>2022-12-16 |</span><span style={{ paddingLeft: '5px' }}>IMDb: Not Released</span></MDBTypography>
                                 </div>
                             </div>
                             <p></p>

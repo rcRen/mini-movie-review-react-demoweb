@@ -9,15 +9,15 @@ const Movie2 = () => {
                 <MDBRow className="justify-content-center align-items-center h-100">
                     <MDBCol lg="9" xl="7">
                         <MDBCard>
-                            <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '200px' }}>
+                            <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '250px' }}>
                                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
                                     <MDBCardImage src="https://image.tmdb.org/t/p/w500/tVxGt7uffLVhIIcwuldXOMpFBPX.jpg"
                                         alt="Mulholland Drive image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
                                 </div>
                                 <div className="ms-3" style={{ marginTop: '75px' }}>
-                                    <MDBTypography tag="h5" style={{ fontSize: '2vw' }}>Mulholland Drive</MDBTypography>
-                                    <MDBTypography tag="h6" style={{ fontSize: '1.5vw' }}>David Lynch</MDBTypography>
-                                    <MDBCardText style={{ fontSize: '1.5vw', paddingTop: '5%' }}>English/Spanish |<span style={{paddingLeft:'5px'}}>2001-06-06 |</span><span style={{paddingLeft:'5px'}}>IMDb: 7.8</span></MDBCardText>
+                                    <MDBTypography tag="h3">Mulholland Drive</MDBTypography>
+                                    <MDBTypography tag="h6">David Lynch</MDBTypography>
+                                    <MDBTypography tag="h6" style={{paddingTop:'10px'}}>English/Spanish |<span style={{paddingLeft:'5px'}}>2001-06-06 |</span><span style={{paddingLeft:'5px'}}>IMDb: 7.8</span></MDBTypography>
                                 </div>
                             </div>
                             <p></p>
