@@ -22,7 +22,7 @@ const Movie1 = () => {
                             <p></p>
                             <MDBCardBody className="text-black p-4">
                                 <div className="mb-5">
-                                    <p className="lead fw-normal mb-1" style={{ paddingTop: '12%' }}>Overview</p>
+                                    <p className="lead fw-normal mb-1" style={{ paddingTop: '15%' }}>Overview</p>
                                     <div className="p-4" style={{ backgroundColor: '#f8f9fa' }}>
                                         <MDBCardText className="font-italic mb-1">
                                             The spirited Boruto Uzumaki, son of Seventh Hokage Naruto, is a skilled ninja who possesses the same brashness and passion his father once had. However, the constant absence of his father, who is busy with his Hokage duties, puts a damper on Boruto's fire. He ends up meeting his father's friend Sasuke, and requests to become... his apprentice!? The curtain on the story of the new generation rises!
