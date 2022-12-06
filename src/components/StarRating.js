@@ -6,8 +6,10 @@ export function StarRating() {
 
   // Catch Rating value
   const handleRating = (rate) => {
-    setRating(rate);
-    alert(rate);
+    localStorage.setItem("rate", setRating(rate));
+
+    // setRating(rate);
+    // alert(rate);
     // other logic
   };
   // Optional callback functions

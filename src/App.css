@@ -59,18 +59,18 @@
   font-family: 'Lato', sans-serif;
 }
 
-body {
+/* body {
   background-image: url('/public/bgimg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-position: fixed;
-}
+} */
 
 .container{
   width: 100%;
   margin:1em auto;
-  background-color: darkslategray;
+  /* background-color: darkslategray; */
 }
 
 .home,

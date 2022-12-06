@@ -37,7 +37,12 @@ const Header = () => {
 
   return (
     <>
-      <Navbar bg="dark" expand="lg" variant="dark">
+      <Navbar
+        // bg="light"
+        expand="lg"
+        // variant="light"
+        // style={{ position: "absolute", right: "20%", color: "red" }}
+      >
         <Container fluid>
           <Navbar.Brand href="">Welcome</Navbar.Brand>
           <Navbar.Brand href="">Trending</Navbar.Brand>

@@ -1,22 +1,45 @@
 import React, { useState } from "react";
+import { Rating } from "react-simple-star-rating";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import MyButton from "./UI/MyButton";
 
 function AddReviewForm() {
-  const [isLoggedIn, setIsLoggedIn] = React.useContext(LoggedInContext);
-  const [inputContent, setInputContent] = useState();
-  const [inputRate, setInputRate] = useState();
+  // const [isLoggedIn, setIsLoggedIn] = React.useContext(LoggedInContext);
+  const [movieId, setMovieId] = useState(
+    localStorage.getItem("movieId") || "307463"
+  );
+  const [userId, setUserId] = useState(
+    localStorage.getItem("userId") || "1234"
+  );
+  const [username, setUsername] = useState(
+    localStorage.getItem("username") || "user1"
+  );
+  const [inputContentText, setInputContentText] = useState();
+  const [rating, setRating] = useState(0);
+
+  const handleRating = (rate) => {
+    setRating(rate);
+  };
+  // Optional callback functions
+  const onPointerEnter = () => console.log("Enter");
+  const onPointerLeave = () => console.log("Leave");
+  const onPointerMove = (value, index) => console.log(value, index);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3001/register", {
+    fetch("http://localhost:3001/addreview", {
       method: "POST",
       body: JSON.stringify({
-        email: inputEmail,
-        username: inputUsername,
-        password: inputPassword,
-        comfirmpassword: inputComfirmPassword,
+        movieId: movieId,
+        userId: userId,
+        username: username,
+        updateDate: Date(),
+        rate: rating,
+        content: [
+          {
+            contentText: inputContentText,
+          },
+        ],
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -24,50 +47,51 @@ function AddReviewForm() {
     })
       .then((data) => data.json())
       .then((json) => {
-        // (json.success? alert('Registration sucessful') : alert(JSON.stringify(json)));
-        setErrorMsg(json.errorMsg);
-        setPwdErrMsg(json.pwdErrMsg);
-        setEmailErrMsg(json.emailErrMsg);
+        json.success
+          ? alert("Add Review Successful")
+          : alert(JSON.stringify(json));
       });
   };
 
   return (
-    <div>
-      <Form onSubmit={handleSubmit}>
-        {/* <Form.Group className='mb-5'>
+    <>
+      <div className="App">
+        <Rating
+          onClick={handleRating}
+          onPointerEnter={onPointerEnter}
+          onPointerLeave={onPointerLeave}
+          onPointerMove={onPointerMove}
+          initialValue={rating}
+          ratingValue={rating}
+          /* Available Props */
+        />
+      </div>
+      <div>
+        <Form onSubmit={handleSubmit}>
+          {/* <Form.Group className='mb-5'>
           <Form.Text>{errorMsg}</Form.Text>
         </Form.Group> */}
-        <Form.Group className="my-3 mx-3" controlId="formBasicEmail">
-          <Form.Control
-            type="text"
-            placeholder="content"
-            value={inputContent}
-            onChange={(e) => {
-              setInputContent(e.target.value);
-            }}
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-5 mx-3">
-          <Form.Control
-            type="text"
-            placeholder="rate"
-            value={inputRate}
-            onChange={(e) => {
-              setInputRate(e.target.value);
-            }}
-          />
-        </Form.Group>
-        <Button
-          variant="primary"
-          type="submit"
-          className="mx-3"
-          style={{ width: "100px", float: "right" }}
-        >
-          Submit
-        </Button>
-      </Form>
-    </div>
+          <Form.Group className="my-3 mx-3" controlId="formBasicEmail">
+            <Form.Control
+              type="textarea"
+              placeholder="Content Text"
+              value={inputContentText}
+              onChange={(e) => {
+                setInputContentText(e.target.value);
+              }}
+            />
+          </Form.Group>
+          <Button
+            variant="primary"
+            type="submit"
+            className="mx-3"
+            style={{ width: "100px", float: "right" }}
+          >
+            Submit
+          </Button>
+        </Form>
+      </div>
+    </>
   );
 }
 
