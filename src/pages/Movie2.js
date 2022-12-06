@@ -1,22 +1,23 @@
 import React from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography } from 'mdb-react-ui-kit';
 
-const Movie1 = () => {
+
+const Movie2 = () => {
     return (
         <div className="container" style={{ width: '80%', marginLeft: '20%' }}>
             <MDBContainer className="py-5 h-100">
                 <MDBRow className="justify-content-center align-items-center h-100">
                     <MDBCol lg="9" xl="7">
                         <MDBCard>
-                            <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '250px'}}>
+                            <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '250px' }}>
                                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
-                                    <MDBCardImage src="https://image.tmdb.org/t/p/w500/1k6iwC4KaPvTBt1JuaqXy3noZRY.jpg"
-                                        alt="Boruto: Naruto the Movie image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
+                                    <MDBCardImage src="https://image.tmdb.org/t/p/w500/tVxGt7uffLVhIIcwuldXOMpFBPX.jpg"
+                                        alt="Mulholland Drive image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
                                 </div>
                                 <div className="ms-3" style={{ marginTop: '75px' }}>
-                                    <MDBTypography tag="h3">Boruto: Naruto the Movie</MDBTypography>
-                                    <MDBTypography tag="h6">Hiroyuki Yamashita</MDBTypography>
-                                    <MDBTypography tag="h6" style={{paddingTop:'10px'}}>Japanese |<span style={{paddingLeft:'5px'}}>2015-08-07 |</span><span style={{paddingLeft:'5px'}}>IMDb: 7.6</span></MDBTypography>
+                                    <MDBTypography tag="h3">Mulholland Drive</MDBTypography>
+                                    <MDBTypography tag="h6">David Lynch</MDBTypography>
+                                    <MDBTypography tag="h6" style={{paddingTop:'10px'}}>English/Spanish |<span style={{paddingLeft:'5px'}}>2001-06-06 |</span><span style={{paddingLeft:'5px'}}>IMDb: 7.8</span></MDBTypography>
                                 </div>
                             </div>
                             <p></p>
@@ -25,7 +26,7 @@ const Movie1 = () => {
                                     <p className="lead fw-normal mb-1" style={{paddingTop:'5%'}}>Overview</p>
                                     <div className="p-4" style={{ backgroundColor: '#f8f9fa' }}>
                                         <MDBCardText className="font-italic mb-1">
-                                            The spirited Boruto Uzumaki, son of Seventh Hokage Naruto, is a skilled ninja who possesses the same brashness and passion his father once had. However, the constant absence of his father, who is busy with his Hokage duties, puts a damper on Boruto's fire. He ends up meeting his father's friend Sasuke, and requests to become... his apprentice!? The curtain on the story of the new generation rises!
+                                        Blonde Betty Elms has only just arrived in Hollywood to become a movie star when she meets an enigmatic brunette with amnesia. Meanwhile, as the two set off to solve the second woman's identity, filmmaker Adam Kesher runs into ominous trouble while casting his latest project.
                                         </MDBCardText>
                                     </div>
                                 </div>
@@ -52,4 +53,4 @@ const Movie1 = () => {
     );
 }
 
-export default Movie1;
+export default Movie2;

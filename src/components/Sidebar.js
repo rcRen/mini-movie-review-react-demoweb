@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SidebarData } from './SidebarData';
-import { IconContext } from 'react-icons';
+import { Button } from 'react-bootstrap';
 
 import './Sidebar.css';
 
@@ -9,31 +8,63 @@ function Sidebar() {
 
     return (
         <>
-            <IconContext.Provider value={{ color: '#fff' }}>
-                <nav className='nav-menu active'>
-                    <ul className="nav-menu-items">
-                        <li className="navbar-toggle">
-                            <Link to="/" className="menu-bars">
-                                <img src="logo.png" alt="logo" id="logo"></img>
-                            </Link>
-                        </li>
-                        {SidebarData.map((item, index) => {
-                            return (
-                                <li key={index} className={item.cName}>
-                                    <Link to={item.path}>
-                                        {item.icon}
-                                        <span>{item.title}</span>
-                                    </Link>
-                                </li>
-                            )
-                        })}
-                        <hr style={{ width: "80%"}}></hr>
-                        <p style={{ fontSize: '15px', 
-                                    color: 'white' }}>Copyright &copy;  Team BK
-                        </p>
-                    </ul>
-                </nav>
-            </IconContext.Provider>
+            <nav className='nav-menu'>
+                <ul>
+                    <li className="navbar-button">
+                        <Link to="/">
+                            <img src="logo.png" alt="logo" id="logo"></img>
+                        </Link>
+                    </li>
+                    <li className="navbar-button">
+                        <Link to="/" >
+                            <Button variant='outline-info' className="nav-text">
+                                Home
+                            </Button>
+                        </Link>
+                    </li>
+                    <li className="navbar-button">
+                        <Link to="/popular">
+                            <Button variant='outline-info' className="nav-text">
+                                Popular
+                            </Button>
+                        </Link>
+                    </li>
+                    <li className="navbar-button">
+                        <Link to="/about">
+                            <Button variant='outline-info' className="nav-text">
+                                About
+                            </Button>
+                        </Link>
+                    </li>
+                    <li className="navbar-button">
+                        <Link to="/movie1">
+                            <Button className="nav-text" style={{ backgroundImage: "url('naruto.png')", backgroundSize: "cover" }}>
+                                &nbsp;
+                            </Button>
+                        </Link>
+                    </li>
+                    <li className="navbar-button">
+                        <Link to="/movie2">
+                            <Button className="nav-text" style={{ backgroundImage: "url('mulholland_drive.jpeg')", backgroundSize: "cover" }}>
+                                &nbsp;
+                            </Button>
+                        </Link>
+                    </li>
+                    <li className="navbar-button">
+                        <Link to="/movie3">
+                            <Button className="nav-text" style={{ backgroundImage: "url('avatar.jpg')", backgroundSize: "cover" }}>
+                                &nbsp;
+                            </Button>
+                        </Link>
+                    </li>
+                    <hr style={{ width: "70%" }}></hr>
+                    <p style={{
+                        fontSize: '1vw',
+                        color: 'beige'
+                    }}>Copyright &copy;  Team BK
+                    </p>
+                </ul>
+            </nav>
         </>
     )
 }
