@@ -8,7 +8,7 @@ const Movie1 = () => {
                 <MDBRow className="justify-content-center align-items-center h-100">
                     <MDBCol lg="9" xl="7">
                         <MDBCard>
-                            <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '250px'}}>
+                            <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '250px' }}>
                                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
                                     <MDBCardImage src="https://image.tmdb.org/t/p/w500/1k6iwC4KaPvTBt1JuaqXy3noZRY.jpg"
                                         alt="Boruto: Naruto the Movie image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
@@ -16,16 +16,19 @@ const Movie1 = () => {
                                 <div className="ms-3" style={{ marginTop: '75px' }}>
                                     <MDBTypography tag="h3">Boruto: Naruto the Movie</MDBTypography>
                                     <MDBTypography tag="h6">Hiroyuki Yamashita</MDBTypography>
-                                    <MDBTypography tag="h6" style={{paddingTop:'10px'}}>Japanese |<span style={{paddingLeft:'5px'}}>2015-08-07 |</span><span style={{paddingLeft:'5px'}}>IMDb: 7.6</span></MDBTypography>
+                                    <MDBTypography tag="h6" style={{ paddingTop: '10px' }}>Japanese |<span style={{ paddingLeft: '5px' }}>2015-08-07 |</span><span style={{ paddingLeft: '5px' }}>IMDb: 7.6</span></MDBTypography>
                                 </div>
                             </div>
                             <p></p>
                             <MDBCardBody className="text-black p-4">
                                 <div className="mb-5">
-                                    <p className="lead fw-normal mb-1" style={{paddingTop:'5%'}}>Overview</p>
+                                    <p className="lead fw-normal mb-1" style={{ paddingTop: '5%' }}>Overview</p>
                                     <div className="p-4" style={{ backgroundColor: '#f8f9fa' }}>
                                         <MDBCardText className="font-italic mb-1">
                                             The spirited Boruto Uzumaki, son of Seventh Hokage Naruto, is a skilled ninja who possesses the same brashness and passion his father once had. However, the constant absence of his father, who is busy with his Hokage duties, puts a damper on Boruto's fire. He ends up meeting his father's friend Sasuke, and requests to become... his apprentice!? The curtain on the story of the new generation rises!
+                                        </MDBCardText>
+                                        <MDBCardText className="font-italic mb-1">
+                                            It's been some years since the end of the Shinobi War. Naruto Uzumaki is the 7th Hokage of Konohagakure, in this new era. His son, Boruto Uzumaki, will soon enter the Chûnin exams, alongside Sarada Uchiha and the mysterious Mitsuki.
                                         </MDBCardText>
                                     </div>
                                 </div>

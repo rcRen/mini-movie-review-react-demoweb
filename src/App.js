@@ -11,6 +11,7 @@ import About from './pages/About';
 import Movie1 from './pages/Movie1';
 import Movie2 from './pages/Movie2';
 import Movie3 from './pages/Movie3';
+import NoPage from './pages/NoPage';
 
 
 import RegisterLoginPage from './pages/RegisterLoginPage';
@@ -34,6 +35,8 @@ function App() {
             <Route path="/movie1" element={<Movie1 />} />
             <Route path="/movie2" element={<Movie2 />} />
             <Route path="/movie3" element={<Movie3 />} />
+
+            <Route path="*" element={<NoPage />} />
           </Routes>
         </div>
       </Router>
