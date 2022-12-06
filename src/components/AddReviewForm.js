@@ -35,11 +35,12 @@ function AddReviewForm() {
         username: username,
         updateDate: Date(),
         rate: rating,
-        content: [
-          {
-            contentText: inputContentText,
-          },
-        ],
+        // content: [
+        //   {
+        //     contentText: inputContentText,
+        //   },
+        // ],
+        content: inputContentText,
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -73,7 +74,8 @@ function AddReviewForm() {
         </Form.Group> */}
           <Form.Group className="my-3 mx-3" controlId="formBasicEmail">
             <Form.Control
-              type="textarea"
+              as="textarea"
+              rows={3}
               placeholder="Content Text"
               value={inputContentText}
               onChange={(e) => {
