@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { User } from '../helpers/LocalStorage';
 
 import './Header.css';
@@ -8,6 +7,7 @@ import LoginButton from './LoginButtton';
 import LogoutButton from './LogoutButton';
 import React from 'react';
 import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
+
 
 
 function Header() {
@@ -20,7 +20,6 @@ function Header() {
                     <Nav className='me-auto my-2 my-lg-3'
                         style={{ maxHeight: '100px' }}
                         navbarScroll></Nav>
-
                     <Form className='d-flex'>
                         <FormControl
                             type='search'
