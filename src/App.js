@@ -39,8 +39,6 @@ function App() {
         <Router>
           <Header />
           <button onClick={toggleTheme}>Toggle Theme</button>
-          <StarRating />
-
           <AddReviewButton />
           {/* <MyReviewButton /> */}
           <Navbar />
