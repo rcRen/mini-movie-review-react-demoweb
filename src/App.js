@@ -10,9 +10,14 @@ import MoviePopular from './pages/MoviePopular';
 import About from './pages/About';
 import Movie1 from './pages/Movie1';
 
+import RegisterLoginPage from './pages/RegisterLoginPage';
+
 function App() {
 
   return (
+    // <div>
+    //   <RegisterLoginPage/>
+    // </div>
     <>
       <Router>
         <Header />
