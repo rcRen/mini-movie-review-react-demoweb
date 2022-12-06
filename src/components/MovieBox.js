@@ -1,13 +1,14 @@
 import { Modal, Button } from 'react-bootstrap';
 import React, { useState } from 'react';
+import DisplayMovieInfo from './DisplayMovieInfo';
 
 const API_IMG = "https://image.tmdb.org/t/p/w500";
 const MovieBox = ({ title, poster_path, vote_average, release_date, overview }) => {
-
     const [show, setShow] = useState(false);
 
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
+
 
     return (
         <div className='card text-center bg-secondary mb-3'>

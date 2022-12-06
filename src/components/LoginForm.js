@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, createContext } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form'
 import MyButton from './UI/MyButton'
+import {LoggedInContext} from "../App";
+
 
 function LoginForm() {
     const [inputEmail, setInputEmail] = useState();
     const [inputPassword, setInputPassword] = useState();
+    // const [isLoggedIn, setIsLoggedIn] = useContext(LoggedInContext);
+    const [user, setUser] = useState();
+    const userContext = createContext
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,7 +27,11 @@ function LoginForm() {
             .then((data) => data.json())
             .then((json) => {
                 (json.success ? alert('Login sucessful') : alert(json.loginErr));
-            });
+                console.log(json);
+                setUser(json.user);
+                // json.success ? setIsLoggedIn(true): setIsLoggedIn(false);
+            }
+            );
     }
 
     return (

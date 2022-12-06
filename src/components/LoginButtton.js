@@ -1,46 +1,15 @@
-import React from 'react'
+import React from 'react';
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import LoginForm from './LoginForm';
+import { Link } from 'react-router-dom';
 
 function LoginButtton() {
-    const [modalShow, setModalShow] = React.useState(false);
-
-    return (
-        <>
-            <Button variant="primary" onClick={() => setModalShow(true)}>
-                Login
-            </Button>
-
-            <MyVerticallyCenteredModal
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-            />
-        </>
-    );
+	return (
+		<Link to="/identity#login">
+			<Button variant="primary">
+				Login
+			</Button>
+		</Link>
+	);
 }
 
-export default LoginButtton
-
-
-function MyVerticallyCenteredModal(props) {
-    return (
-        <Modal
-            {...props}
-            size="lg"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-        >
-            <Modal.Header closeButton>
-                <Modal.Title id="contained-modal-title-vcenter">
-                    <img src={require('../images/monvie-low-logo.png')} style={{ width: 60, height: 'auto' }} />
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Login
-                </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <LoginForm/>
-            </Modal.Body>
-        </Modal>
-    );
-}
+export default LoginButtton;

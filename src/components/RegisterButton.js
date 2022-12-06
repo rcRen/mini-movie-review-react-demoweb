@@ -1,19 +1,14 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route, useNavigate,Link } from 'react-router-dom';
-import RegisterLoginPage from '../pages/RegisterLoginPage'
+import React from 'react';
 import Button from 'react-bootstrap/Button';
-import { NavLink } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function RegisterButton() {
-    return (
-      <Router>
-      <h1>hahahhahahaha</h1>
-      <Link to='/RegisterLoginPage'>
-      <button>
-        <a href='../pages/RegisterLoginPage.js'>Register</a>
-      </button>
-      </Link>
-      </Router>
-    )
+	return (
+		<div>
+			<Link to="/identity#register">
+				<Button variant="warning">Register</Button>
+			</Link>
+		</div>
+	);
 }
-export default RegisterButton
+export default RegisterButton;
