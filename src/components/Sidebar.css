@@ -10,16 +10,10 @@
 }
 
 .nav-menu {
-    font-size: 2.5vh;
+    font-size: 1.2vw;
     width: 20%;
     height: 90%;
-    position: flex;
-    /* position: fixed;
-    top: 5%;
-    left: 2%; */
-    
-    /* justify-content: flex-start; */
-    
+    position: flex;  
 }
 
 .nav-text {
@@ -29,9 +23,9 @@
     list-style: none;
     height: 7vh;
     border: 1px solid beige;
-    border-radius: 20px;
+    border-radius: 2vh;
     width: 80%;
-    margin: 3% 0;
+    margin: 5% 0;
 }
 
 .nav-text a {
@@ -48,7 +42,7 @@
     background-color: #1a83ff;
     color: black;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 2vh;
 }
 
 .nav-menu-items {
@@ -64,5 +58,5 @@ span {
     height: 80%;
     background-color:white;
     padding: 6%;  
-    margin: -15% 0 15% 0;
+    margin: -20% 0 10% 0;
 }
