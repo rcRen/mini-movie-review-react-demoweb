@@ -25,15 +25,17 @@ function App() {
       <Router>
         <Header />
         <Sidebar />
-        <Routes>
-          <Route path="/" element={<MovieHome />} />
-          <Route path="/popular" element={<MoviePopular />} />
-          <Route path="/about" element={<About />} />
-          {/* <Route path="/profile" element={isLogin ? <Profile />} : '' /> */}
-          <Route path="/movie1" element={<Movie1 />} />
-          <Route path="/movie2" element={<Movie2 />} />
-          <Route path="/movie3" element={<Movie3 />} />
-        </Routes>
+        <div className='main' style={{ height: '100%' }}>
+          <Routes>
+            <Route path="/" element={<MovieHome />} />
+            <Route path="/popular" element={<MoviePopular />} />
+            <Route path="/about" element={<About />} />
+            {/* <Route path="/profile" element={isLogin ? <Profile />} : '' /> */}
+            <Route path="/movie1" element={<Movie1 />} />
+            <Route path="/movie2" element={<Movie2 />} />
+            <Route path="/movie3" element={<Movie3 />} />
+          </Routes>
+        </div>
       </Router>
     </>
   );
