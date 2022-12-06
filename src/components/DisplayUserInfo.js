@@ -9,12 +9,12 @@ const DisplayUserInfo = () => {
   return (
     <Container>
         <Row  className="profilePic">
-          <Col>
+          <Col md={{ span: 3, offset: 6 }}>
           <img src={require('../images/person.png')} />
           </Col>
         </Row>
         <Row className="profileContainer">
-          <Col md={6}>
+          <Col md={{ span: 6, offset: 3 }}>
             <Form>
               <Form.Group controlId="name">
                 <Form.Label>Name</Form.Label>

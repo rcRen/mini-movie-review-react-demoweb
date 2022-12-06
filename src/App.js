@@ -8,21 +8,27 @@ import About from './pages/About';
 import Recommend1 from './pages/Recommend1';
 import Recommend2 from './pages/Recommend2';
 import Recommend3 from './pages/Recommend3';
+import UserPage from './pages/UserPage';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import RegisterLoginPage from './pages/RegisterLoginPage';
+import MyReview from './components/MyReview';
 
 
 function App() {
   return (
-    // <div>
-    //   <RegisterLoginPage/>
-    // </div>
-    <>
+    //<div>
+    //<RegisterLoginPage />
+    //</div>
+    <BrowserRouter>
+
+
       <Header />
+      <Navbar />
+      <MyReview />
       <Router>
-        <Navbar />
         <div class="main" className="container">
           <Routes>
             {/* <Route path="/" element={<Home />} /> */}
@@ -36,7 +42,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-    </>
+    </BrowserRouter>
   );
 }
 

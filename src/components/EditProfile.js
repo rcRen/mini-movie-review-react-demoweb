@@ -9,7 +9,7 @@ const EditProfile = () => {
   return (
     <Container>
         <Row className="profileContainer">
-          <Col md={6}>
+          <Col md={{ span: 6, offset: 4 }}>
             <Form>
               <Form.Group controlId="name">
                 <Form.Label>Name</Form.Label>

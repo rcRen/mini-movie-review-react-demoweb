@@ -9,12 +9,12 @@ const UserPage = () => {
   return (
     <Container>
             <Row  className="profilePic">
-          <Col>
+          <Col md={{ span: 3, offset: 6 }}>
           <img src={require('../images/person.png')} />
           </Col>
         </Row>
         <Row className="profileContainer">
-          <Col md={6}>
+          <Col md={{ span: 6, offset: 3 }}>
             <Form>
               <Form.Group controlId="name">
                 <Form.Label>Name</Form.Label>
@@ -48,10 +48,12 @@ const UserPage = () => {
                 <Form.Label>Change Profile Picture</Form.Label>
                 <Form.Control type="file" />
               </Form.Group>
-              <Button type="submit" varient="primary">
+            </Form>
+          </Col>
+          <Col md={{ span: 3, offset: 5 }}>
+          <Button type="submit" varient="primary">
                 Update
               </Button>
-            </Form>
           </Col>
           <Col
             style={{
