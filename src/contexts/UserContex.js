@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-import { User } from '../helpers/storage';
+import { User } from '../helpers/LocalStorage';
 
 const userContent = {
 	isLoggin: false,

@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
-import { User } from '../helpers/storage';
+import { User } from '../helpers/LocalStorage';
 
 function RegisterForm() {
 	const navigate = useNavigate();
@@ -11,19 +11,19 @@ function RegisterForm() {
 	const [email, setEmail] = useState('');
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
-	const [comfirmPassword, setComfirmpassword] = useState('');
+	const [confirmPassword, setConfirmpassword] = useState('');
 	const [message, setMessage] = useState('');
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		fetch('http://localhost:3001/register', {
+		fetch('http://localhost:3001/identity/register', {
 			method: 'POST',
 			body: JSON.stringify({
 				email,
 				username,
 				password,
-				comfirmPassword,
+				confirmPassword,
 			}),
 			headers: {
 				'Content-type': 'application/json; charset=UTF-8',
@@ -31,7 +31,7 @@ function RegisterForm() {
 		})
 			.then((res) => res.json())
 			.then((res) => {
-				console.info(res);
+				console.info("1111"+ res);
 
 				if (res.status === 'failed') {
 					setMessage(res.message);
@@ -46,7 +46,7 @@ function RegisterForm() {
 	return (
 		<>
 			<Form onSubmit={handleSubmit}>
-				<Form.Group className="my-3 mx-3" controlId="formBasicEmail">
+				<Form.Group className="my-5 mx-3" controlId="formBasicEmail">
 					<Form.Control
 						type="email"
 						placeholder="Email"
@@ -79,15 +79,15 @@ function RegisterForm() {
 				<Form.Group className="mb-5 mx-3">
 					<Form.Control
 						type="password"
-						placeholder="Comfirm Password"
-						value={comfirmPassword}
+						placeholder="Confirm Password"
+						value={confirmPassword}
 						onChange={(e) => {
-							setComfirmpassword(e.target.value);
+							setConfirmpassword(e.target.value);
 						}}
 					/>
 				</Form.Group>
 				{message && (
-					<Form.Group className="mb-5">
+					<Form.Group className="mx-3 mb-5">
 						<Form.Text>{message}</Form.Text>
 					</Form.Group>
 				)}

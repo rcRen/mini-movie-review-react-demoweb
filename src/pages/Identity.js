@@ -4,9 +4,9 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import LoginForm from '../components/LoginForm';
 import RegisterForm from '../components/RegisterForm';
 import MyCard from '../components/UI/MyCard';
-import './RegisterLoginPage.css';
+import './Identity.css';
 
-import { User } from '../helpers/storage';
+import { User } from '../helpers/LocalStorage';
 
 function Identity() {
 	const { hash } = useLocation();
@@ -21,7 +21,7 @@ function Identity() {
 	}, [hash]);
 
 	return (
-		<Container>
+		<Container className='identity-container'>
 			<Row>
 				<Col xs={4} sm={4} md={4} lg={4}>
 					<img
@@ -30,12 +30,12 @@ function Identity() {
 					/>
 				</Col>
 			</Row>
-			<Row>
+			<Row className="mt-1 p-3">
 				<Col xs={12} sm={12} md={6} lg={6} className="mt-5 p-5">
 					<img src={require('../images/loginimage.png')} />
 				</Col>
 				<Col xs={12} sm={12} md={6} lg={6}>
-					<MyCard style={{ height: '550px' }}>
+					<MyCard style={{ height: '550px', backgroundColor: 'white' }}>
 						<Tabs
 							defaultActiveKey={hash}
 							id="justify-tab-example"
@@ -52,7 +52,7 @@ function Identity() {
 					</MyCard>
 				</Col>
 			</Row>
-			<Row className="fixed-bottom text-center">
+			<Row className="text-center">
 				<Col xs={12} sm={12} md={12} lg={12}>
 					<span style={{ color: '#ffffff' }}>
 						&copy; 2022 Group BK{' '}

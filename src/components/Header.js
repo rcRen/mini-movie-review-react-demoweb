@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { User } from '../helpers/storage';
+import { User } from '../helpers/LocalStorage';
 
 import './Header.css';
 import RegisterButton from './RegisterButton';

@@ -13,13 +13,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import IdentityPage from './pages/Identity';
 
-import UserProvider from './contexts/user';
+import UserProvider from './contexts/UserContex';
+import UpdatePassword from './pages/UpdatePassword';
 
 function App() {
 	return (
-		// <div>
-		//   <RegisterLoginPage/>
-		// </div>
 		<>
 			{/* <Header /> */}
 			<UserProvider>
@@ -50,6 +48,10 @@ function App() {
 									element={<IdentityPage />}
 								/>
 							</Route>
+							<Route
+									path="/user/update-password"
+									element={<UpdatePassword/>}
+								/>
 						</Routes>
 					</div>
 				</Router>
