@@ -15,7 +15,7 @@ function AvatarIcon() {
   return (
     <div style={{ flexDirection: "row", direction: "rtl" }}>
       <Button style={{backgroundColor:"white",backgroundSize:"cover"}}onClick={handleSubmit}>
-        <img src="./images/person.png" width="30" height="30" alt=""/>
+      <img src="person.png" alt="img" size="35" height="35" width="35" />
       </Button>
     </div>
   );
