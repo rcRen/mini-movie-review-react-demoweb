@@ -2,6 +2,9 @@ import React from "react";
 import { Form, Button, Row, Col, Container } from "react-bootstrap";
 import Layout from "../layout/Layout";
 import "./UserPage.css";
+import "./UserPage.css";
+import {Container} from "react-bootstrap";
+import DisplayUserInfo from "../components/DisplayUserInfo";
 
 const UserPage = () => {
   return (
@@ -59,6 +62,9 @@ const UserPage = () => {
         ></Col>
       </Row>
       </Layout>
+  //  <Container>
+  //   <DisplayUserInfo />
+  //   </Container>
   );
 };
 

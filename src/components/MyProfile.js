@@ -1,7 +1,5 @@
 import React from "react";
 import { Form, Button, Row, Col, Container } from "react-bootstrap";
-import "./UserPage.css";
-
 
 
 const MyProfile = () => {
