@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -8,21 +9,38 @@ import About from "./pages/About";
 import Movie1 from "./pages/Movie1";
 import Movie2 from "./pages/Movie2";
 import Movie3 from "./pages/Movie3";
-import Sidebar from "./components/Sidebar";
 import IdentityPage from "./pages/Identity";
 import UserProvider from "./contexts/UserContex";
 import UpdatePassword from "./pages/UpdatePassword";
-import Header from "./components/Header";
 import DisplayMoviePage from "./pages/DisplayMoviePage";
 import UserPage from "./pages/UserPage";
+import EditReviewForm from './components/EditReviewForm';
+import MyReview from './pages/MyReview';
+import AddReview from './pages/AddReview';
+import { StarRating } from './components/StarRating';
+
+
+
 
 function App() {
+	const [theme, setTheme] = useState(
+		localStorage.getItem('theme') || 'light'
+	);
+	const toggleTheme = () => {
+		if (theme === 'light') {
+			setTheme('dark');
+		} else {
+			setTheme('light');
+		}
+	};
+	useEffect(() => {
+		localStorage.setItem('theme', theme);
+		document.body.className = theme;
+	}, [theme]);
   return (
     <>
       <UserProvider>
         <Router>
-          {/* <Header />
-					<Sidebar /> */}
           <div class="main">
             <Routes>
               <Route path="/" element={<MovieHome />} />
@@ -40,6 +58,12 @@ function App() {
                 path="/user/update-password"
                 element={<UpdatePassword />}
               />
+			  <Route path="/addreview" element={<AddReview />} />
+							<Route path="/myreview" element={<MyReview />} />
+			  <Route
+								path="/edit/:id"
+								element={<EditReviewForm />}
+							/>
             </Routes>
           </div>
         </Router>

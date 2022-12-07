@@ -41,7 +41,18 @@
 }
 
 /* ------------ Start Here ------------ */
-* {
+
+.dark {
+  background-color: #333;
+  color: #fff;
+  }
+  .light {
+  background-color: #fff;
+  color: #333;
+  }
+
+
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -54,6 +65,12 @@ body {
   background-size: cover;
   background-position: center;
   background-position: fixed;
+} */
+
+.container{
+  width: 100%;
+  margin:1em auto;
+  /* background-color: darkslategray; */
   /* margin: 20px;
   padding: 20px;
   text-decoration: none;

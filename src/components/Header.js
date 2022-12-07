@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../App.css';
+import {
+	Container,
+	Form,
+	FormControl,
+	Nav,
+	Navbar,
+	Button,
+} from 'react-bootstrap';
 import { User } from '../helpers/LocalStorage';
 import RegisterButton from './RegisterButton';
 import LoginButton from './LoginButtton';
 import LogoutButton from './LogoutButton';
-import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Header() {
 	const userInfo = User.getUser();
