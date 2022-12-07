@@ -3,19 +3,12 @@ import { User } from '../helpers/LocalStorage';
 import RegisterButton from './RegisterButton';
 import LoginButton from './LoginButtton';
 import LogoutButton from './LogoutButton';
-import {
-	Navbar,
-	Container,
-	Nav,
-	Form,
-	FormControl,
-	Button,
-} from 'react-bootstrap';
+import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
 
 function Header() {
 	const userInfo = User.getUser();
 	return (
-		<Navbar expand="lg" style={{ marginTop: '2%', marginRight: '2%' }}>
+		<Navbar expand="lg" className='mx-3 my-3' >
 			<Container fluid>
 				<Navbar.Brand href="#"></Navbar.Brand>
 				{/* <Navbar.Toggle aria-controls='navbarScroll'></Navbar.Toggle>
@@ -52,24 +45,3 @@ function Header() {
 }
 
 export default Header;
-
-// const Header = () => {
-// 	const userInfo = User.getUser();
-
-// 	return (
-// 		<div class="header">
-// 			<div style={{ float: 'right' }}>
-// 				{userInfo ? (
-// 					<LogoutButton />
-// 				) : (
-// 					<>
-// 						<LoginButton />
-// 						<RegisterButton />
-// 					</>
-// 				)}
-// 			</div>
-// 		</div>
-// 	);
-// };
-
-// export default Header;
