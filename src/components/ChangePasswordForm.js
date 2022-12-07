@@ -1,28 +1,30 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { useNavigate } from 'react-router-dom';
 
+import { UserContext } from '../contexts/UserContex';
 import { User } from '../helpers/LocalStorage';
 
-function RegisterForm() {
+const ChangePasswordForm = () => {
 	const navigate = useNavigate();
-
-	const [email, setEmail] = useState('');
-	const [username, setUsername] = useState('');
-	const [password, setPassword] = useState('');
-	const [confirmPassword, setConfirmpassword] = useState('');
+	const user = useContext(UserContext);
+	const email = user.email;
+	const username = user.username;
+	const [oldPassword, setOldPassword] = useState();
+	const [newPassword, setNewPassword] = useState();
+	const [confirmPassword, setConfirmPassword] = useState();
 	const [message, setMessage] = useState('');
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-
-		fetch('http://localhost:3001/identity/register', {
+		fetch('http://localhost:3001/user/change-password', {
 			method: 'POST',
 			body: JSON.stringify({
-				email,
 				username,
-				password,
+				email,
+				oldPassword,
+				newPassword,
 				confirmPassword,
 			}),
 			headers: {
@@ -31,9 +33,9 @@ function RegisterForm() {
 		})
 			.then((res) => res.json())
 			.then((res) => {
-				console.info("1111"+ res);
-
-				if (res.status === 'failed') {
+				console.info(res)
+				console.info(message)
+				if (!res.message) {
 					setMessage(res.message);
 				} else {
 					User.setUser(res.data);
@@ -42,7 +44,6 @@ function RegisterForm() {
 				}
 			});
 	};
-
 	return (
 		<>
 			<Form onSubmit={handleSubmit}>
@@ -51,9 +52,7 @@ function RegisterForm() {
 						type="email"
 						placeholder="Email"
 						value={email}
-						onChange={(e) => {
-							setEmail(e.target.value);
-						}}
+						readable="readonly"
 					/>
 				</Form.Group>
 				<Form.Group className="mb-5 mx-3">
@@ -61,18 +60,27 @@ function RegisterForm() {
 						type="text"
 						placeholder="Username"
 						value={username}
-						onChange={(e) => {
-							setUsername(e.target.value);
-						}}
+						readable="readonly"
 					/>
 				</Form.Group>
 				<Form.Group className="mb-5 mx-3" controlId="formBasicPassword">
 					<Form.Control
 						type="password"
-						placeholder="Password"
-						value={password}
+						placeholder="Old Password"
+						value={oldPassword}
 						onChange={(e) => {
-							setPassword(e.target.value);
+							setOldPassword(e.target.value);
+						}}
+					/>
+				</Form.Group>
+
+				<Form.Group className="mb-5 mx-3" controlId="formBasicPassword">
+					<Form.Control
+						type="password"
+						placeholder="New Password"
+						value={newPassword}
+						onChange={(e) => {
+							setNewPassword(e.target.value);
 						}}
 					/>
 				</Form.Group>
@@ -82,11 +90,11 @@ function RegisterForm() {
 						placeholder="Confirm Password"
 						value={confirmPassword}
 						onChange={(e) => {
-							setConfirmpassword(e.target.value);
+							setConfirmPassword(e.target.value);
 						}}
 					/>
 				</Form.Group>
-				{message && (
+				{(message==='') && (
 					<Form.Group className="mx-3 mb-5">
 						<Form.Text>{message}</Form.Text>
 					</Form.Group>
@@ -97,11 +105,11 @@ function RegisterForm() {
 					className="mx-3"
 					style={{ width: '100px', float: 'right' }}
 				>
-					Register
+					Submit
 				</Button>
 			</Form>
 		</>
 	);
-}
+};
 
-export default RegisterForm;
+export default ChangePasswordForm;

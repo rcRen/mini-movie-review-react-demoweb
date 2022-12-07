@@ -25,3 +25,5 @@ yarn-error.log*
 
 # ignore stage file
 package-lock.json
+
+.prettierrc.json

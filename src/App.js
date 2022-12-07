@@ -8,15 +8,10 @@ import Sidebar from './components/Sidebar';
 import MovieHome from './pages/MovieHome';
 import MoviePopular from './pages/MoviePopular';
 import About from './pages/About';
-// import Profile from './pages/Profile';
-import Recommend1 from './pages/Recommend1';
-import Recommend2 from './pages/Recommend2';
-import Recommend3 from './pages/Recommend3';
+import Movie1 from './pages/Movie1';
+import Movie2 from './pages/Movie2';
+import Movie3 from './pages/Movie3';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import RegisterLoginPage from './pages/RegisterLoginPage';
-import MyReview from './components/MyReview';
 
 function App() {
 
@@ -27,17 +22,17 @@ function App() {
     <>
       <Header />
       <Router>
-        <Navbar />
-        <div class="main" className="container">
+        <Header />
+        <Sidebar />
+        <div className='main' style={{ height: '100%' }}>
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
             <Route path="/" element={<MovieHome />} />
             <Route path="/popular" element={<MoviePopular />} />
             <Route path="/about" element={<About />} />
             {/* <Route path="/profile" element={isLogin ? <Profile />} : '' /> */}
-            <Route path="/recommend1" element={<Recommend1 />} />
-            <Route path="/recommend2" element={<Recommend2 />} />
-            <Route path="/recommend3" element={<Recommend3 />} />
+            <Route path="/movie1" element={<Movie1 />} />
+            <Route path="/movie2" element={<Movie2 />} />
+            <Route path="/movie3" element={<Movie3 />} />
           </Routes>
         </div>
       </Router>

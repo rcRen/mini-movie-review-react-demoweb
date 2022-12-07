@@ -1,22 +1,22 @@
 import React from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography } from 'mdb-react-ui-kit';
 
-const Movie1 = () => {
+const Movie3 = () => {
     return (
         <div className="container" style={{ width: '80%', marginLeft: '20%' }}>
             <MDBContainer className="py-5 h-100">
                 <MDBRow className="justify-content-center align-items-center h-100">
                     <MDBCol lg="9" xl="7">
                         <MDBCard>
-                            <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '250px'}}>
+                            <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '250px' }}>
                                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
-                                    <MDBCardImage src="https://image.tmdb.org/t/p/w500/1k6iwC4KaPvTBt1JuaqXy3noZRY.jpg"
-                                        alt="Boruto: Naruto the Movie image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
+                                    <MDBCardImage src="https://image.tmdb.org/t/p/w500/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg"
+                                        alt="Avatar: The Way of Water image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
                                 </div>
                                 <div className="ms-3" style={{ marginTop: '75px' }}>
-                                    <MDBTypography tag="h3">Boruto: Naruto the Movie</MDBTypography>
-                                    <MDBTypography tag="h6">Hiroyuki Yamashita</MDBTypography>
-                                    <MDBTypography tag="h6" style={{paddingTop:'10px'}}>Japanese |<span style={{paddingLeft:'5px'}}>2015-08-07 |</span><span style={{paddingLeft:'5px'}}>IMDb: 7.6</span></MDBTypography>
+                                    <MDBTypography tag="h3">Avatar: The Way of Water</MDBTypography>
+                                    <MDBTypography tag="h6">James Cameron</MDBTypography>
+                                    <MDBTypography tag="h6" style={{paddingTop:'10px'}}>English |<span style={{ paddingLeft: '5px' }}>2022-12-16 |</span><span style={{ paddingLeft: '5px' }}>IMDb: Not Released</span></MDBTypography>
                                 </div>
                             </div>
                             <p></p>
@@ -25,7 +25,10 @@ const Movie1 = () => {
                                     <p className="lead fw-normal mb-1" style={{paddingTop:'5%'}}>Overview</p>
                                     <div className="p-4" style={{ backgroundColor: '#f8f9fa' }}>
                                         <MDBCardText className="font-italic mb-1">
-                                            The spirited Boruto Uzumaki, son of Seventh Hokage Naruto, is a skilled ninja who possesses the same brashness and passion his father once had. However, the constant absence of his father, who is busy with his Hokage duties, puts a damper on Boruto's fire. He ends up meeting his father's friend Sasuke, and requests to become... his apprentice!? The curtain on the story of the new generation rises!
+                                            Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.
+                                        </MDBCardText>
+                                        <MDBCardText className="font-italic mb-1">
+                                            Jake Sully lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their planet.
                                         </MDBCardText>
                                     </div>
                                 </div>
@@ -52,4 +55,4 @@ const Movie1 = () => {
     );
 }
 
-export default Movie1;
+export default Movie3;
