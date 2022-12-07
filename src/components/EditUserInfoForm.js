@@ -1,6 +1,5 @@
 import React from "react";
 import { Form, Button, Row, Col, Container } from "react-bootstrap";
-import "./UserPage.css";
 
 
 
@@ -8,7 +7,13 @@ const EditUserInfoForm = () => {
 
   return (
     <Container>
-        <Row className="profileContainer">
+      <Row>
+      <Col md={{ span: 6, offset: 4 }}>
+        <h1>Edit your information</h1>
+        </Col>
+        </Row>
+
+       <Row >
           <Col md={{ span: 6, offset: 4 }}>
             <Form>
               <Form.Group controlId="name">
@@ -48,18 +53,7 @@ const EditUserInfoForm = () => {
               </Button>
             </Form>
           </Col>
-          <Col
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-          </Col>
         </Row>
-
-    </Container>
-  );
-};
-
+      </Container>
+  )};
 export default EditUserInfoForm;

@@ -7,11 +7,11 @@ const MyReview = () => {
   
   return (
     <Container>
-    <Link to="createreview"></Link>
+    
     <Row  className="profilePic">
           <Col md={{ span: 3, offset: 6 }}>
           <Button style={{marginLeft:10, marginBottom:6}} size="lg">
-      Reviews
+      My Reviews
       </Button>
           </Col>
         </Row>
@@ -27,7 +27,7 @@ const MyReview = () => {
             cursor: "pointer",
             alignSelf:"center",
             fontSize:18,
-          }}>title</span>
+          }}>my review 1</span>
           <div>
             <Button>Edit</Button>
             <Button variant="danger" className="mx-2">Delete</Button>
@@ -44,7 +44,7 @@ const MyReview = () => {
             cursor: "pointer",
             alignSelf:"center",
             fontSize:18,
-          }}>title</span>
+          }}>my review 2</span>
           <div>
             <Button>Edit</Button>
             <Button variant="danger" className="mx-2">Delete</Button>
@@ -61,7 +61,7 @@ const MyReview = () => {
             cursor: "pointer",
             alignSelf:"center",
             fontSize:18,
-          }}>title</span>
+          }}>my review 3</span>
           <div>
             <Button>Edit</Button>
             <Button variant="danger" className="mx-2">Delete</Button>

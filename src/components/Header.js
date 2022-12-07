@@ -4,6 +4,7 @@ import RegisterButton from './RegisterButton';
 import LoginButton from './LoginButtton';
 import LogoutButton from './LogoutButton';
 import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import AvatarIcon from './AvatarIcon';
 
 function Header() {
     return (
@@ -27,6 +28,7 @@ function Header() {
                     </Form>
                 {/* </Navbar.Collapse> */}
             </Container>
+            <AvatarIcon />
         </Navbar>
     )
 }
