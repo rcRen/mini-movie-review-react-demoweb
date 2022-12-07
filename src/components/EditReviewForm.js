@@ -12,7 +12,7 @@ function EditReviewForm() {
   const [movieId, setMovieId] = useState();
   const [movieName, setMovieName] = useState();
   const [userId, setUserId] = useState();
-  const [userName, setUserName] = useState();
+  const [username, setUsername] = useState();
   const [inputContentText, setInputContentText] = useState();
   const [rating, setRating] = useState(0);
 
@@ -41,7 +41,7 @@ function EditReviewForm() {
         setMovieId(data.movieId);
         setMovieName(data.movieName);
         setUserId(data.userId);
-        setUserName(data.userName);
+        setUsername(data.username);
         setInputContentText(data.content);
         setRating(data.rate);
       })
@@ -58,7 +58,7 @@ function EditReviewForm() {
         movieId: movieId,
         movieName: movieName,
         userId: userId,
-        userName: userName,
+        username: username,
         updateDate: updateDate,
         rate: rating,
         content: inputContentText,
@@ -84,7 +84,7 @@ function EditReviewForm() {
     <>
       <div className="App">
         {movieName}
-        {userName}
+        {username}
         {moment(updateDate).format("DD-MM-YYYY hh:mm:ss a")}
         <Rating
           onClick={handleRating}
