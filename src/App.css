@@ -63,7 +63,7 @@ body {
 
 .main {
   display: flex;
-  margin-top: -45%;
+  /* margin-top: -48%; */
   align-items: center; 
   justify-content: center;
   /* height: 80%; */

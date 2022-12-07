@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function LogoutButton() {
 	return (
 		<div>
 			<Link to="/identity#logout">
-				<Button variant="warning">Logout</Button>
+				<Button variant="link text-white">Logout</Button>
 			</Link>
 		</div>
 	);

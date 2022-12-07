@@ -5,7 +5,7 @@ export const User = {
 	setUser: (payload) => {
 		localStorage.setItem(
 			'user',
-			(typeof payload === 'object'&& payload !== 'undefined') ? JSON.stringify(payload) : payload
+			(typeof payload === 'object') ? JSON.stringify(payload) : payload
 		);
 	},
 	clearUser: () => {

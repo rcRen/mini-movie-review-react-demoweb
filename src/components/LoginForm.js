@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import MyButton from './UI/MyButton';
 import { useNavigate } from 'react-router-dom';
 import { User } from '../helpers/LocalStorage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function LoginForm() {
 	const navigate = useNavigate();
@@ -29,9 +29,8 @@ function LoginForm() {
 					setMessage(res.message);
 				} else {
 					User.setUser(res.data);
-					navigate('/user/change-password');
+					navigate('/');
 				}
-				User.setUser(res.data);
 			});
 	};
 
@@ -39,6 +38,15 @@ function LoginForm() {
 		<>
 			<Form onSubmit={handleSubmit}>
 				<div style={{ paddingBottom: '150px' }}>
+					<div style={{ height: '5px' }}>
+						{message && (
+							<Form.Group className="mx-3">
+								<Form.Text className="text-danger fs-6">
+									*{message}
+								</Form.Text>
+							</Form.Group>
+						)}
+					</div>
 					<Form.Group
 						className="mx-3 my-5 "
 						controlId="formBasicEmail"
@@ -65,11 +73,6 @@ function LoginForm() {
 							}}
 						/>
 					</Form.Group>
-					{message && (
-						<Form.Group className="mx-3 mb-5">
-							<Form.Text>{message}</Form.Text>
-						</Form.Group>
-					)}
 				</div>
 				<Button
 					variant="primary"

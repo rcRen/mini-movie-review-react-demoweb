@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { User } from '../helpers/LocalStorage';
 
@@ -31,7 +32,7 @@ function RegisterForm() {
 		})
 			.then((res) => res.json())
 			.then((res) => {
-				console.info("1111"+ res);
+				console.info('1111' + res);
 
 				if (res.status === 'failed') {
 					setMessage(res.message);
@@ -46,6 +47,13 @@ function RegisterForm() {
 	return (
 		<>
 			<Form onSubmit={handleSubmit}>
+				<div style={{height:'5px'}}>
+				{message && (
+					<Form.Group className="mx-3">
+						<Form.Text className="text-danger fs-5">*{message}</Form.Text>
+					</Form.Group>
+				)}
+				</div>
 				<Form.Group className="my-5 mx-3" controlId="formBasicEmail">
 					<Form.Control
 						type="email"
@@ -76,7 +84,7 @@ function RegisterForm() {
 						}}
 					/>
 				</Form.Group>
-				<Form.Group className="mb-5 mx-3">
+				<Form.Group className="mb-3 mx-3">
 					<Form.Control
 						type="password"
 						placeholder="Confirm Password"
@@ -86,11 +94,6 @@ function RegisterForm() {
 						}}
 					/>
 				</Form.Group>
-				{message && (
-					<Form.Group className="mx-3 mb-5">
-						<Form.Text>{message}</Form.Text>
-					</Form.Group>
-				)}
 				<Button
 					variant="primary"
 					type="submit"
