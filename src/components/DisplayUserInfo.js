@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import EditProfile from "./EditProfile";
+import EditProfileButton from "./EditProfileButton";
 import MyReviewButton from "./MyReviewButton";
 
 const DisplayUserInfo = () => {
@@ -26,7 +26,7 @@ const DisplayUserInfo = () => {
         <Row>
         <Col  sm={4}/>
         <Col  sm={2}>
-          <EditProfile />
+          <EditProfileButton />
         </Col>
         <Col sm={2}>
           <MyReviewButton />
