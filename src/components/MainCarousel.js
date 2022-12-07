@@ -1,6 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './MainCarousel.css';
-import MyCard from './UI/MyCard';
 
 function MainCarousel() {
     return (

@@ -6,10 +6,10 @@ import MyCard from "../components/UI/MyCard";
 
 function Layout(props) {
   return (
-    <Container className={`${props.className}`} style={props.style}>
+    <Container className={`${props.className}`} style={props.style} >
       <Row>
         <Col md={3} lg={3}>
-          <MyCard className="bg-secondary">
+          <MyCard className="bg-secondary position-fixed">
             <Sidebar />
           </MyCard>
         </Col>

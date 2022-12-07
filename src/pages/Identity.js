@@ -4,7 +4,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
 import RegisterForm from "../components/RegisterForm";
 import MyCard from "../components/UI/MyCard";
-import "./Identity.css";
 
 import { User } from "../helpers/LocalStorage";
 

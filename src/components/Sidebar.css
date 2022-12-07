@@ -1,13 +1,14 @@
 .nav-menu {
     font-size: 1.2vw;
-    width: 20vw;
+    width: 15%;
     height: 100%;
+    margin-bottom: 10%;
     /* display: flex;   */
     
 }
 
 .navbar-button{
-    display: flex;
+    /* display: flex; */
     justify-content: flex-start;
     align-items: center;
     list-style: none;
@@ -30,7 +31,7 @@
 
 #logo {
     width: 100%;
-    display: flex;
+    /* display: flex; */
     justify-content: flex-start;
     align-items: center;
     background-color:beige;

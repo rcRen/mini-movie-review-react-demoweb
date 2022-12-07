@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import {
+  MDBCol,
+  MDBContainer,
+  MDBRow,
+  MDBCard,
+  MDBCardText,
+  MDBCardBody,
+  MDBCardImage,
+  MDBTypography,
+} from "mdb-react-ui-kit";
 import { Row, Col } from "react-bootstrap";
-// import Sidebar from "../components/Sidebar";
-// import Header from "../components/Header";
 import MyCard from "../components/UI/MyCard";
 import Layout from "../layout/Layout";
 
@@ -25,63 +33,71 @@ function DisplayMoviePage() {
       });
   }, []);
 
+  console.log(movie);
   return (
     <Layout>
-      <MyCard>
-        <Row>
-          <Col md={3} ls={3}>
-            <img src={API_IMG + movie.poster_path} alt={movie.title} />
-          </Col>
-          <Col md={8} ls={8} className="pt-2 ">
-            <h4 className="text-center ">
-              <b>
-                {movie.title}({movie.release_date})
-              </b>
-            </h4>
-            <h4 className="text-center ">aaaa</h4>
-            <p className="text-left">{movie.overview}</p>
-          </Col>
-        </Row>
-      </MyCard>
+      <MDBContainer className="py-5 h-100">
+        <MDBRow className="justify-content-center align-items-center h-100">
+          <MDBCol lg="9" xl="7">
+            <MDBCard>
+              <div
+                className="rounded-top text-white d-flex flex-row"
+                style={{ backgroundColor: "#000", height: "250px" }}
+              >
+                <div
+                  className="ms-4 mt-5 d-flex flex-column"
+                  style={{ width: "150px" }}
+                >
+                  <MDBCardImage
+                    src={API_IMG + movie.poster_path}
+                    alt={movie.title}
+                    className="mt-4 mb-2 img-thumbnail"
+                    fluid
+                    style={{ width: "150px", zIndex: "1" }}
+                  />
+                </div>
+                <div className="ms-3" style={{ marginTop: "75px" }}>
+                  <MDBTypography tag="h3">{movie.title}</MDBTypography>
+                  {/* <MDBTypography tag="h6">Hiroyuki Yamashita</MDBTypography> */}
+                  <MDBTypography tag="h6" style={{ paddingTop: "10px" }}>
+                    <span style={{ paddingLeft: "5px" }}>
+                      {movie.release_date} |
+                    </span>
+                    <span style={{ paddingLeft: "5px" }}>
+                    {movie.runtime} h |
+                    </span>
+                    <span style={{ paddingLeft: "5px" }}>
+                      IMDb: {movie.vote_average}
+                    </span>
+                    <span style={{ paddingLeft: "5px" }}>
+                      {/* Company: {movie.production_companies[0]} */}
+                    </span>
+                   
+                  </MDBTypography>
+                </div>
+              </div>
+              <p></p>
+              <MDBCardBody className="text-black p-4">
+                <div className="mb-5">
+                  <p
+                    className="lead fw-normal mb-1"
+                    style={{ paddingTop: "5%" }}
+                  >
+                    Overview
+                  </p>
+                  <div className="p-4" style={{ backgroundColor: "#f8f9fa" }}>
+                    <MDBCardText className="font-italic mb-1">
+                      {movie.overview}
+                    </MDBCardText>
+                  </div>
+                </div>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
     </Layout>
   );
-
-  // return (
-  // 	<Container className="identity-container">
-  // 		<Row>
-  // 			<Col md={3} lg={3}>
-  // 				<MyCard className="bg-secondary">
-  // 					<Sidebar />
-  // 				</MyCard>
-  // 			</Col>
-  // 			<Col md={9} lg={9}>
-  // 				<Row>
-  // 					<Col md={12} lg={12}>
-  // 						<Header />
-  // 					</Col>
-  // 				</Row>
-  // 				<Row>
-  // 					<MyCard>
-  // 						<Row>
-  // 							<Col md={3} ls={3}>
-  // 								<img
-  // 									src={API_IMG + movie.poster_path}
-  // 									alt={movie.title}
-  // 								/>
-  // 							</Col>
-  // 							<Col md={8} ls={8} className="pt-2 " >
-  //               <h4 className="text-center " ><b>{movie.title}({movie.release_date})</b></h4>
-  //               <h4 className="text-center " >aaaa</h4>
-  //               <p className='text-left'>{movie.overview}</p>
-
-  // 							</Col>
-  // 						</Row>
-  // 					</MyCard>
-  // 				</Row>
-  // 			</Col>
-  // 		</Row>
-  // 	</Container>
-  // );
 }
 
 export default DisplayMoviePage;
