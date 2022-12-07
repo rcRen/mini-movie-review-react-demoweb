@@ -17,16 +17,19 @@ const Movie2 = () => {
                                 <div className="ms-3" style={{ marginTop: '75px' }}>
                                     <MDBTypography tag="h3">Mulholland Drive</MDBTypography>
                                     <MDBTypography tag="h6">David Lynch</MDBTypography>
-                                    <MDBTypography tag="h6" style={{paddingTop:'10px'}}>English/Spanish |<span style={{paddingLeft:'5px'}}>2001-06-06 |</span><span style={{paddingLeft:'5px'}}>IMDb: 7.8</span></MDBTypography>
+                                    <MDBTypography tag="h6" style={{ paddingTop: '10px' }}>English/Spanish |<span style={{ paddingLeft: '5px' }}>2001-06-06 |</span><span style={{ paddingLeft: '5px' }}>IMDb: 7.8</span></MDBTypography>
                                 </div>
                             </div>
                             <p></p>
                             <MDBCardBody className="text-black p-4">
                                 <div className="mb-5">
-                                    <p className="lead fw-normal mb-1" style={{paddingTop:'5%'}}>Overview</p>
+                                    <p className="lead fw-normal mb-1" style={{ paddingTop: '5%' }}>Overview</p>
                                     <div className="p-4" style={{ backgroundColor: '#f8f9fa' }}>
                                         <MDBCardText className="font-italic mb-1">
-                                        Blonde Betty Elms has only just arrived in Hollywood to become a movie star when she meets an enigmatic brunette with amnesia. Meanwhile, as the two set off to solve the second woman's identity, filmmaker Adam Kesher runs into ominous trouble while casting his latest project.
+                                            Blonde Betty Elms has only just arrived in Hollywood to become a movie star when she meets an enigmatic brunette with amnesia. Meanwhile, as the two set off to solve the second woman's identity, filmmaker Adam Kesher runs into ominous trouble while casting his latest project.
+                                        </MDBCardText>
+                                        <MDBCardText className="font-italic mb-1">
+                                            After a car wreck on the winding Mulholland Drive renders a woman amnesiac, she and a perky Hollywood-hopeful search for clues and answers across Los Angeles in a twisting venture beyond dreams and reality.
                                         </MDBCardText>
                                     </div>
                                 </div>

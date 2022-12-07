@@ -36,6 +36,8 @@ function Sidebar() {
                             </Button>
                         </Link>
                     </li>
+                    <hr style={{ width: "70%" }}></hr>
+                    <p style={{fontSize:'1.5vw', color:'beige'}}>Recommends:</p>
                     <li className="navbar-button">
                         <Link to="/movie1">
                             <Button className="nav-text" style={{ backgroundImage: "url('naruto.png')", backgroundSize: "cover" }}>

@@ -30,6 +30,7 @@ const Movie3 = () => {
                                         <MDBCardText className="font-italic mb-1">
                                             Jake Sully lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their planet.
                                         </MDBCardText>
+                                        <MDBCardText>&nbsp;</MDBCardText>
                                     </div>
                                 </div>
                                 {/* <div className="d-flex justify-content-between align-items-center mb-4">
