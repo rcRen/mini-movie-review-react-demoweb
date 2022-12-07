@@ -4,21 +4,15 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-function AddReviewForm() {
+function EditReviewForm() {
   // const [isLoggedIn, setIsLoggedIn] = React.useContext(LoggedInContext);
-  const [movieId, setMovieId] = useState(
-    localStorage.getItem("movieId") || "307463"
-  );
-  const [movieName, setMovieName] = useState(
-    localStorage.getItem("movieName") || "spider man2"
-  );
-  const [userId, setUserId] = useState(
-    localStorage.getItem("userId") || "1234"
-  );
-  const [username, setUsername] = useState(
-    localStorage.getItem("username") || "user1"
-  );
+  const { id } = useParams();
+  const [movieId, setMovieId] = useState();
+  const [movieName, setMovieName] = useState();
+  const [userId, setUserId] = useState();
+  const [userName, setUserName] = useState();
   const [inputContentText, setInputContentText] = useState();
   const [rating, setRating] = useState(0);
 
@@ -33,25 +27,40 @@ function AddReviewForm() {
 
   const [updateDate, setUpdateDate] = useState();
   useEffect(() => {
+    callGetBody();
     setUpdateDate(moment().format("DD-MM-YYYY hh:mm:ss a"));
   }, []);
-  console.log(updateDate);
+  console.log(id);
+
+  const callGetBody = () => {
+    fetch(`http://localhost:3001/commandreviews/${id}`, { method: "GET" })
+      .then((response) => response.json())
+      // .then((json) => alert(JSON.stringify(json)))
+      .then((data) => {
+        console.log(data);
+        setMovieId(data.movieId);
+        setMovieName(data.movieName);
+        setUserId(data.userId);
+        setUserName(data.userName);
+        setInputContentText(data.content);
+        setRating(data.rate);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3001/addreview", {
-      method: "POST",
+    fetch("http://localhost:3001/commandreviews", {
+      method: "PUT",
       body: JSON.stringify({
+        recordId: id,
         movieId: movieId,
         movieName: movieName,
         userId: userId,
-        username: username,
+        userName: userName,
         updateDate: updateDate,
         rate: rating,
-        // content: [
-        //   {
-        //     contentText: inputContentText,
-        //   },
-        // ],
         content: inputContentText,
       }),
       headers: {
@@ -61,7 +70,7 @@ function AddReviewForm() {
       .then((data) => data.json())
       .then((json) => {
         json.success
-          ? alert("Add Review Successful")
+          ? alert("Update Review Successful")
           : alert(JSON.stringify(json));
       });
     try {
@@ -74,6 +83,9 @@ function AddReviewForm() {
   return (
     <>
       <div className="App">
+        {movieName}
+        {userName}
+        {moment(updateDate).format("DD-MM-YYYY hh:mm:ss a")}
         <Rating
           onClick={handleRating}
           onPointerEnter={onPointerEnter}
@@ -83,8 +95,7 @@ function AddReviewForm() {
           ratingValue={rating}
           /* Available Props */
         />
-      </div>
-      <div>
+
         <Form onSubmit={handleSubmit}>
           {/* <Form.Group className='mb-5'>
           <Form.Text>{errorMsg}</Form.Text>
@@ -114,4 +125,4 @@ function AddReviewForm() {
   );
 }
 
-export default AddReviewForm;
+export default EditReviewForm;

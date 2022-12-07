@@ -19,6 +19,7 @@ const Header = () => {
   const searchMovie = async (e) => {
     e.preventDefault();
     console.log("Searching");
+    // alert(query);
     // alert(localStorage.getItem("query"));
     try {
       // navigation.navigate(name, params)
@@ -30,6 +31,7 @@ const Header = () => {
   };
   const changeHandler = (e) => {
     setQuery(e.target.value);
+    // alert(query);
     // localStorage.setItem("query", query);
   };
 

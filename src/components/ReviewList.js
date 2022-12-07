@@ -34,11 +34,11 @@ function ReviewList() {
 
   useEffect(() => {
     fetchData();
-  });
+  }, []);
 
   const handleSubmit = (recordId) => {
     // e.preventDefault();
-    alert(recordId);
+    // alert(recordId);
     console.log({ recordId });
     fetch("http://localhost:3001/commandreviews/" + recordId, {
       method: "DELETE",
@@ -58,8 +58,7 @@ function ReviewList() {
       <table>
         <tbody>
           <tr>
-            <th>Movie Id</th>
-            <th>User Id</th>
+            <th>Movie Name</th>
             <th>Username</th>
             <th>Rate</th>
             <th>Content</th>
@@ -68,19 +67,21 @@ function ReviewList() {
           </tr>
           {data.map((item, index) => (
             <tr key={index}>
-              <td>{item.movieId}</td>
-              <td>{item.userId}</td>
+              <td>{item.movieName}</td>
               <td>{item.username}</td>
               <td>{item.rate}</td>
               <td>{item.content}</td>
               <td>{moment(item.updateDate).format("DD-MM-YYYY hh:mm:ss a")}</td>
               <td>
-                <Link to={"/edit/" + item._id}>Edit</Link>
+                <Link to={"/edit/" + item._id}>
+                  <Button variant="primary"> EDIT </Button>
+                </Link>
                 <Button
                   variant="primary"
                   value={item._id}
                   onClick={(e) => handleSubmit(e.target.value)}
                 >
+                  {" "}
                   DELETE
                 </Button>
               </td>

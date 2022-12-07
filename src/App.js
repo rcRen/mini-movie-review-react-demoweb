@@ -11,6 +11,7 @@ import Recommend1 from "./pages/Recommend1";
 import Recommend2 from "./pages/Recommend2";
 import Recommend3 from "./pages/Recommend3";
 import AddReview from "./pages/AddReview";
+import EditReviewForm from "./components/EditReviewForm";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -41,7 +42,7 @@ function App() {
           <button onClick={toggleTheme}>Toggle Theme</button>
           <AddReviewButton />
           <MyReviewButton />
-          <Navbar />
+          {/* <Navbar /> */}
           <div class="main" className="container">
             <Routes>
               {/* <Route path="/" element={<Home />} /> */}
@@ -55,6 +56,7 @@ function App() {
               <Route path="/addreview" element={<AddReview />} />
               <Route path="/myreview" element={<MyReview />} />
               <Route path="/searchhome" element={<SearchHome />} />
+              <Route path="/edit/:id" element={<EditReviewForm />} />
             </Routes>
           </div>
         </Router>

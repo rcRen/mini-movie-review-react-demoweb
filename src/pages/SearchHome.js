@@ -9,10 +9,10 @@ const SearchHome = () => {
   const API_SEARCH =
     "https://api.themoviedb.org/3/search/movie?api_key=287aa00fd9d0384e651f7f3865c5a54f&query";
   const [query, setQuery] = useState(location.state.query);
-  //   alert(query);
+  alert("searchome" + query);
   const [movies, setMovies] = useState([]);
   const url = `https://api.themoviedb.org/3/search/movie?api_key=287aa00fd9d0384e651f7f3865c5a54f&query=${query}`;
-
+  alert(url);
   //   const searchMovie = async (e) => {
   //     e.preventDefault();
   //     console.log("Searching");
@@ -31,14 +31,11 @@ const SearchHome = () => {
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
-      .then(
-        (data) => {
-          console.log(query);
-          setMovies(data.results);
-        },
-        [query]
-      );
-  });
+      .then((data) => {
+        console.log(query);
+        setMovies(data.results);
+      });
+  }, []);
 
   return (
     <div>
