@@ -43,8 +43,8 @@ const SearchHome = () => {
       <div>
         {movies.length > 0 ? (
           <div class="grid">
-            {movies.map((movieReq) => (
-              <MovieBox key={movieReq.id} {...movieReq} />
+            {movies.map((movieReq, index) => (
+              <MovieBox key={movieReq.id + index} {...movieReq} />
             ))}
           </div>
         ) : (

@@ -66,12 +66,12 @@ function ReviewList() {
             <th>Action</th>
           </tr>
           {data.map((item, index) => (
-            <tr key={index}>
+            <tr key={item + index}>
               <td>{item.movieName}</td>
               <td>{item.username}</td>
               <td>{item.rate}</td>
               <td>{item.content}</td>
-              <td>{moment(item.updateDate).format("DD-MM-YYYY hh:mm:ss a")}</td>
+              <td>{moment(item.updateDate).format("YYYY-MM-DD hh:mm:ss a")}</td>
               <td>
                 <Link to={"/edit/" + item._id}>
                   <Button variant="primary"> EDIT </Button>

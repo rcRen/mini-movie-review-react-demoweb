@@ -85,7 +85,7 @@ function EditReviewForm() {
       <div className="App">
         {movieName}
         {username}
-        {moment(updateDate).format("DD-MM-YYYY hh:mm:ss a")}
+        {moment(updateDate).format("YYYY-MM-DD hh:mm:ss a")}
         <Rating
           onClick={handleRating}
           onPointerEnter={onPointerEnter}
