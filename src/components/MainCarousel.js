@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
-import './Carousel.css';
+import './MainCarousel.css';
 
-function UncontrolledExample() {
+function MainCarousel() {
     return (
         <div className="box">
             <Carousel>
@@ -40,4 +40,4 @@ function UncontrolledExample() {
     );
 }
 
-export default UncontrolledExample;
+export default MainCarousel;

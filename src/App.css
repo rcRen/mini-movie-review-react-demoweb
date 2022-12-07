@@ -71,24 +71,48 @@
   width: 100%;
   margin:1em auto;
   /* background-color: darkslategray; */
+  /* margin: 20px;
+  padding: 20px;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none; */
+}
+
+.main {
+  display: flex;
+  margin-top: -45%;
+  align-items: center; 
+  justify-content: center;
+  /* height: 80%; */
 }
 
 .home,
 .popular,
-.about,
-.recommend1,
-.recommend2,
-.recommend3 {
+.about {
   display: flex;
-  height: 90vh;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 2rem;
+  border: 1px solid black;
+  height: 50vh;
+  margin-left: 5%;
+  margin-bottom: 10%;
+}
+
+.movie1,
+.movie2,
+.movie3 {
+  display: flex;
+  font-size: 20px;
+  border: 1px solid black;
+  height: 50vh;
+  margin-left: 5%;
+  margin-bottom: 10%;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 20%);
+  grid-template-columns: repeat(auto-fill, 22%);
   grid-template-rows: auto;
   grid-gap: 0.6rem;
   justify-content: right;
