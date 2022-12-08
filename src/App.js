@@ -16,6 +16,7 @@ import MyReview from "./pages/MyReview";
 import UserMyReview from "./components/UserMyReview";
 import AddReview from "./pages/AddReview";
 import SearchHome from "./pages/SearchHome";
+import NoPage from "./pages/NoPage";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -54,6 +55,7 @@ function App() {
               <Route path="/addreview" element={<AddReview />} />
 
               <Route path="/edit/:id" element={<EditReview />} />
+              <Route path="*" element={<NoPage />} />
             </Routes>
           </div>
         </Router>
