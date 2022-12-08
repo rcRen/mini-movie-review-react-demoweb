@@ -20,7 +20,7 @@ function About() {
                         <MDBCard>
                             <div className="rounded-top d-flex flex-row" style={{ backgroundColor: 'beige', height: '80px' }}>
                                 <div className="ms-3" style={{ marginTop: '20px' }}>
-                                    <MDBTypography tag="h2" style={{ color: 'black' }}>Project MONVIE - Team BK</MDBTypography>
+                                    <MDBTypography tag="h2" style={{ color: 'black', textShadow: '2px 2px 5px red'}}>Project MONVIE - Team BK</MDBTypography>
                                 </div>
                             </div>
                             <p></p>

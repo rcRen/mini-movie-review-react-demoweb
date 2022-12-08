@@ -29,7 +29,7 @@ function Header() {
           style={{ maxHeight: "100px" }}
           navbarScroll
         ></Nav>
-		<SearchBar/>
+        <SearchBar />
         {userInfo ? (
           <>
             <AvatarIcon />

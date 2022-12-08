@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function LoginButton() {
 	return (
 		<Link to="/identity#login">
-			<Button variant="link" className='text-white'>
+			<Button variant="info" className='text-white'>
 				Login
 			</Button>
 		</Link>
