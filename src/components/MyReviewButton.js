@@ -17,7 +17,7 @@ function MyReviewButton() {
       {/* <button onClick={handleSubmit}>Home</button> */}
       {/* <Button variant="primary" onClick={handleSubmit}> */}
       <Button variant="primary" onClick={handleSubmit}>
-        My Review
+        Edit My Reviews
       </Button>
     </div>
   );
