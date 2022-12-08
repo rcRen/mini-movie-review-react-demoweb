@@ -50,8 +50,9 @@
   background-position: center;
   background-position: fixed;
   color: #fff;
-  }
-  .light {
+}
+
+.light {
   /* background-color: #fff; */
   background-image: url('/public/images/bgimg.jpg');
   background-repeat: no-repeat;
@@ -59,7 +60,7 @@
   background-position: center;
   background-position: fixed;
   color: #333;
-  }
+}
 
 Button {
   box-shadow: 2px 2px 5px #ccc;
@@ -80,9 +81,9 @@ body {
   background-position: fixed;
 } */
 
-.container{
+.container {
   width: 100%;
-  margin:1em auto;
+  margin: 1em auto;
   /* background-color: darkslategray; */
   /* margin: 20px;
   padding: 20px;
@@ -93,7 +94,7 @@ body {
 
 .main {
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
 }
 
@@ -110,7 +111,7 @@ body {
   margin-left: 5%;
   margin-bottom: 10%;
   border: 1px solid black;
-  
+
 }
 
 .grid {

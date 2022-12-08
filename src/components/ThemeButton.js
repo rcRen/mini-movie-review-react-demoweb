@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Button from 'react-bootstrap/Button';
+import { Button } from "react-bootstrap";
 import * as GiIcons from 'react-icons/gi';
 
 function ThemeButton() {
@@ -17,16 +17,9 @@ function ThemeButton() {
   }, [theme]);
   return (
     <>
-      <div className={`App ${theme}`}>
-        <GiIcons.GiCardExchange
-          style={{
-            color: 'black',
-            width: '50px',
-            height: '28px',
-            backgroundColor: 'beige',
-          }}
-          onClick={toggleTheme} />
-      </div>
+      <Button variant="outline-warning" onClick={toggleTheme}>
+        <GiIcons.GiCardExchange style={{ width: '20px', height: '20px' }} />
+      </Button>
     </>
   );
 }
