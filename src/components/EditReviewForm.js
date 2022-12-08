@@ -87,30 +87,30 @@ function EditReviewForm() {
       <div className="App">
         <MyCard>
           <Row>
-            <Col sm={3} />
+            <Col sm={2} />
             <Col sm={2}>
-              <h5 class="text-left">Movie Name:</h5>
+              <h5 class="text-end">Movie Name:</h5>
             </Col>
-            <Col sm={7}>
-              <h5>{movieName}</h5>
+            <Col sm={8}>
+              <p class="text-start">{movieName}</p>
             </Col>
           </Row>
           <Row>
-            <Col sm={3} />
+            <Col sm={2} />
             <Col sm={2}>
-              <h5 class="text-left">User Name:</h5>
+              <h5 class="text-end">User Name:</h5>
             </Col>
-            <Col sm={7}>
-              <h5>{username}</h5>
+            <Col sm={8}>
+              <p class="text-start">{username}</p>
             </Col>
           </Row>
           <Row>
-            <Col sm={3} />
+            <Col sm={2} />
             <Col sm={2}>
-              <h5>Rating:</h5>
+              <h5 class="text-end">Rating:</h5>
             </Col>
-            <Col sm={7}>
-              <h5>
+            <Col sm={8}>
+              <p class="text-start">
                 {" "}
                 <Rating
                   onClick={handleRating}
@@ -121,28 +121,31 @@ function EditReviewForm() {
                   ratingValue={rating}
                   /* Available Props */
                 />
-              </h5>
+              </p>
             </Col>
           </Row>
           <Row>
-            <Col sm={3} />
+            <Col sm={2} />
             <Col sm={2}>
-              <h5>Update Date:</h5>
+              <h5 class="text-end">Update Date:</h5>
             </Col>
-            <Col sm={7}>
-              <h5> {moment(updateDate).format("YYYY-MM-DD hh:mm:ss a")}</h5>
+            <Col sm={8}>
+              <p class="text-start">
+                {" "}
+                {moment(updateDate).format("YYYY-MM-DD hh:mm:ss a")}
+              </p>
             </Col>
           </Row>
           <Row>
-            <Col sm={3} />
+            <Col sm={2} />
             <Col sm={2}>
-              <h5>Comment:</h5>
+              <h5 class="text-end">Comment:</h5>
             </Col>
-            <Col sm={7} />
+            <Col sm={8} />
           </Row>
           <Row>
-            <Col sm={3} />
-            <Col sm={9}>
+            <Col sm={2} />
+            <Col sm={10}>
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="my-3 mx-3" controlId="formBasicEmail">
                   <Form.Control
