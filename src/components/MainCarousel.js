@@ -1,4 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom';
 import './MainCarousel.css';
 
 function MainCarousel() {
@@ -7,7 +8,7 @@ function MainCarousel() {
             <Carousel>
                 <Carousel.Item interval={3000}>
                     <img
-                        className="d-block w-100"
+                        className="d-block w-100 " style={{borderRadius:'30px'}}
                         src="https://image.tmdb.org/t/p/w500/c1bz69r0v065TGFA5nqBiKzPDys.jpg"
                         alt=""
                     />
@@ -17,7 +18,7 @@ function MainCarousel() {
                 </Carousel.Item>
                 <Carousel.Item interval={3000}>
                     <img
-                        className="d-block w-100"
+                        className="d-block w-100 " style={{borderRadius:'30px'}}
                         src="https://image.tmdb.org/t/p/w500/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg"
                         alt=""
                     />
@@ -27,7 +28,7 @@ function MainCarousel() {
                 </Carousel.Item>
                 <Carousel.Item interval={3000}>
                     <img
-                        className="d-block w-100"
+                        className="d-block w-100 " style={{borderRadius:'30px'}}
                         src="https://image.tmdb.org/t/p/w500/sP1ShE4BGLkHSRqG9ZeGHg6C76t.jpg"
                         alt=""
                     />

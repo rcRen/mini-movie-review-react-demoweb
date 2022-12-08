@@ -1,33 +1,19 @@
-import React from 'react';
-import { Col, Container, Row, Tabs, Tab } from 'react-bootstrap';
-// import './UpdatePassword.css';
-// import Header from '../components/Header';
-import ChangePasswordForm from '../components/ChangePasswordForm';
-import MyCard from '../components/UI/MyCard';
+import React from "react";
+import { Col } from "react-bootstrap";
+import ChangePasswordForm from "../components/ChangePasswordForm";
+import MyCard from "../components/UI/MyCard";
+import Layout from "../layout/Layout";
 
 function UpdatePassword() {
-	return (
-		<>
-			{/* <Header /> */}
-			<MyCard>
-				<ChangePasswordForm />
-			</MyCard>
-		</>
-		//     <Container className='test-border mt-3'>
-		//     <Row>
-		//       <Col  xs={4} sm={4} md={4} lg={3} className='test-border'>
-		//         <Navbar/>
-		//       </Col>
-		//       <Col  xs={4} sm={4} md={4} lg={9} className='test-border'>
-		//         <Row>
-		//             <Col  xs={12} sm={12} md={12} lg={12} className='test-border'>
-		//                 <Header/>
-		//             </Col>
-		//         </Row>
-		//       </Col>
-		//     </Row
-		//   </Container>
-	);
+  return (
+    <Layout>
+      <Col md={12} lg={12} className="d-flex justify-content-center">
+        <MyCard style={{width:'50%', height:'550px',backgroundColor: "white"}}>
+          <ChangePasswordForm />
+        </MyCard>
+      </Col>
+    </Layout>
+  );
 }
 
 export default UpdatePassword;
