@@ -5,6 +5,8 @@ import Button from "react-bootstrap/Button";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import MyCard from "./UI/MyCard";
+import { Row, Col } from "react-bootstrap";
 
 function EditReviewForm() {
   // const [isLoggedIn, setIsLoggedIn] = React.useContext(LoggedInContext);
@@ -90,10 +92,18 @@ function EditReviewForm() {
               <h5 class="text-left">Movie Name:</h5>
             </Col>
             <Col sm={7}>
-              <h5>{item.movieName}</h5>
+              <h5>{movieName}</h5>
             </Col>
           </Row>
-
+          <Row>
+            <Col sm={3} />
+            <Col sm={2}>
+              <h5 class="text-left">User Name:</h5>
+            </Col>
+            <Col sm={7}>
+              <h5>{username}</h5>
+            </Col>
+          </Row>
           <Row>
             <Col sm={3} />
             <Col sm={2}>
@@ -103,8 +113,12 @@ function EditReviewForm() {
               <h5>
                 {" "}
                 <Rating
-                  initialValue={item.rate}
-                  ratingValue={item.rate}
+                  onClick={handleRating}
+                  onPointerEnter={onPointerEnter}
+                  onPointerLeave={onPointerLeave}
+                  onPointerMove={onPointerMove}
+                  initialValue={rating}
+                  ratingValue={rating}
                   /* Available Props */
                 />
               </h5>
@@ -116,10 +130,7 @@ function EditReviewForm() {
               <h5>Update Date:</h5>
             </Col>
             <Col sm={7}>
-              <h5>
-                {" "}
-                {moment(item.updateDate).format("YYYY-MM-DD hh:mm:ss a")}
-              </h5>
+              <h5> {moment(updateDate).format("YYYY-MM-DD hh:mm:ss a")}</h5>
             </Col>
           </Row>
           <Row>
@@ -131,73 +142,31 @@ function EditReviewForm() {
           </Row>
           <Row>
             <Col sm={3} />
-            <Col sm={2}>
-              <h5> {item.content}</h5>
-            </Col>
-            <Col sm={7} />
-          </Row>
-          <Row>
-            <Col sm={3} />
-            <Col sm={2}>
-              <h5>
-                {" "}
-                <Link to={"/edit/" + item._id}>
-                  <Button class="btn btn-primary btn-sm"> EDIT </Button>
-                </Link>
-              </h5>
-            </Col>
-            <Col sm={7}>
-              <h5>
-                {" "}
+            <Col sm={9}>
+              <Form onSubmit={handleSubmit}>
+                <Form.Group className="my-3 mx-3" controlId="formBasicEmail">
+                  <Form.Control
+                    as="textarea"
+                    rows={3}
+                    placeholder="Content Text"
+                    value={inputContentText}
+                    onChange={(e) => {
+                      setInputContentText(e.target.value);
+                    }}
+                  />
+                </Form.Group>
                 <Button
-                  class="btn btn-danger  btn-sm"
-                  value={item._id}
-                  onClick={(e) => handleSubmit(e.target.value)}
+                  variant="primary"
+                  type="submit"
+                  className="mx-3"
+                  style={{ width: "100px", float: "right" }}
                 >
-                  {" "}
-                  DELETE
+                  Submit
                 </Button>
-              </h5>
+              </Form>
             </Col>
           </Row>
         </MyCard>
-        {movieName}
-        {username}
-        {moment(updateDate).format("YYYY-MM-DD hh:mm:ss a")}
-        <Rating
-          onClick={handleRating}
-          onPointerEnter={onPointerEnter}
-          onPointerLeave={onPointerLeave}
-          onPointerMove={onPointerMove}
-          initialValue={rating}
-          ratingValue={rating}
-          /* Available Props */
-        />
-
-        <Form onSubmit={handleSubmit}>
-          {/* <Form.Group className='mb-5'>
-          <Form.Text>{errorMsg}</Form.Text>
-        </Form.Group> */}
-          <Form.Group className="my-3 mx-3" controlId="formBasicEmail">
-            <Form.Control
-              as="textarea"
-              rows={3}
-              placeholder="Content Text"
-              value={inputContentText}
-              onChange={(e) => {
-                setInputContentText(e.target.value);
-              }}
-            />
-          </Form.Group>
-          <Button
-            variant="primary"
-            type="submit"
-            className="mx-3"
-            style={{ width: "100px", float: "right" }}
-          >
-            Submit
-          </Button>
-        </Form>
       </div>
     </>
   );
