@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function LoginButtton() {
+function LoginButton() {
 	return (
 		<Link to="/identity#login">
 			<Button variant="link" className='text-white'>
@@ -14,4 +14,4 @@ function LoginButtton() {
 	);
 }
 
-export default LoginButtton;
+export default LoginButton;
