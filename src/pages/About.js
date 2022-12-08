@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
     MDBCard,
@@ -8,10 +9,11 @@ import {
     MDBCol,
     MDBTypography
 } from 'mdb-react-ui-kit';
+import Layout from '../layout/Layout';
 
 function About() {
     return (
-        <>
+        <Layout>
             <div className="container" style={{ width: '80%', marginLeft: '18%' }}>
                 <MDBRow className='row-cols-1 row-cols-md-1 g-4'>
                     <MDBCol>
@@ -122,7 +124,7 @@ function About() {
                     </MDBCol>
                 </MDBRow>
             </div>
-        </>
+        </Layout>
     )
 }
 
