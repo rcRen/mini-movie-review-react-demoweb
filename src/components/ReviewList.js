@@ -4,7 +4,10 @@ import "../App.css";
 import Button from "react-bootstrap/Button";
 import moment from "moment";
 import { Link } from "react-router-dom";
+import { Rating } from "react-simple-star-rating";
 import MyCard from "./UI/MyCard";
+import { Row, Col } from "react-bootstrap";
+import Layout from "../layout/Layout";
 
 function ReviewList() {
   const [data, setData] = useState([]);
@@ -53,16 +56,14 @@ function ReviewList() {
     } catch (error) {
       console.log(error);
     }
-  }
+  };
   // useEffect(() => {
   //   handleSubmit();
   // }, []);
 
-  
-
   return (
     <div className="App">
-      <table>
+      {/* <table>
         <tbody>
           <tr>
             <th>Movie Name</th>
@@ -95,7 +96,87 @@ function ReviewList() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
+      {data.map((item, index) => (
+        <MyCard key={item + index}>
+          <Row>
+            <Col sm={3} />
+            <Col sm={2}>
+              <h5 class="text-left">Movie Name:</h5>
+            </Col>
+            <Col sm={7}>
+              <h5>{item.movieName}</h5>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col sm={3} />
+            <Col sm={2}>
+              <h5>Rating:</h5>
+            </Col>
+            <Col sm={7}>
+              <h5>
+                {" "}
+                <Rating
+                  initialValue={item.rate}
+                  ratingValue={item.rate}
+                  /* Available Props */
+                />
+              </h5>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={3} />
+            <Col sm={2}>
+              <h5>Update Date:</h5>
+            </Col>
+            <Col sm={7}>
+              <h5>
+                {" "}
+                {moment(item.updateDate).format("YYYY-MM-DD hh:mm:ss a")}
+              </h5>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={3} />
+            <Col sm={2}>
+              <h5>Comment:</h5>
+            </Col>
+            <Col sm={7} />
+          </Row>
+          <Row>
+            <Col sm={3} />
+            <Col sm={2}>
+              <h5> {item.content}</h5>
+            </Col>
+            <Col sm={7} />
+          </Row>
+          <Row>
+            <Col sm={3} />
+            <Col sm={2}>
+              <h5>
+                {" "}
+                <Link to={"/edit/" + item._id}>
+                  <Button class="btn btn-primary btn-sm"> EDIT </Button>
+                </Link>
+              </h5>
+            </Col>
+            <Col sm={7}>
+              <h5>
+                {" "}
+                <Button
+                  class="btn btn-danger  btn-sm"
+                  value={item._id}
+                  onClick={(e) => handleSubmit(e.target.value)}
+                >
+                  {" "}
+                  DELETE
+                </Button>
+              </h5>
+            </Col>
+          </Row>
+        </MyCard>
+      ))}
     </div>
   );
 }
