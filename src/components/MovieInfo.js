@@ -10,13 +10,11 @@ import {
     MDBCardImage,
     MDBTypography,
   } from "mdb-react-ui-kit";
-import MyCard from '../components/UI/MyCard'
 import AddReviewButton from '../components/AddReviewButton'
-
-
 
 function  MovieInfo() {
     const { movie_id } = useParams();
+    // console.log('33333 '+movie_id);
     const API_URL =
       "https://api.themoviedb.org/3/movie/" +
       movie_id +
@@ -69,14 +67,20 @@ function  MovieInfo() {
                       {/* Company: {movie.production_companies[0]} */}
                     </span>
                   </MDBTypography>
+                  <MDBTypography tag="h6" style={{ paddingTop: "10px" }}>
                   <div>
                     {movie.genres &&
                       movie.genres.length > 0 &&
                       movie.genres.map((gen) => <span>{gen.name} /</span>)}
                   </div>
+                  </MDBTypography>
+                  <MDBTypography tag="h6" style={{ paddingTop: "10px" }}>
+                      <AddReviewButton />
+                  </MDBTypography>
+
+                 
                 </div>
               </div>
-              <p></p>
               <MDBCardBody className="text-black p-4">
                 <div className="mb-5">
                   <p
@@ -92,7 +96,7 @@ function  MovieInfo() {
                   </div>
                 </div>
               </MDBCardBody>
-              <AddReviewButton/>
+             
             </MDBCard>
           </MDBCol>
         </MDBRow>

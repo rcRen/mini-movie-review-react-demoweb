@@ -16,7 +16,7 @@ function AddReviewButton() {
       {/* <div style={{ flexDirection: "row", direction: "rtl" }}></div> */}
       {/* <button onClick={handleSubmit}>Home</button> */}
       {/* <Button variant="primary" onClick={handleSubmit}> */}
-      <Button variant="primary" onClick={handleSubmit}>
+      <Button variant="info" onClick={handleSubmit}>
         Add Review
       </Button>
     </div>

@@ -18,8 +18,14 @@ import UserMyReview from "./components/UserMyReview";
 import AddReview from "./pages/AddReview";
 import SearchHome from "./pages/SearchHome";
 import NoPage from "./pages/NoPage";
+import MovieReviewsDisplay from "./components/MovieReviewsDisplay";
 
 function App() {
+  // return(
+  // <>
+  // <MovieReviewsDisplay/>
+  // </>
+  // )
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const toggleTheme = () => {
     if (theme === "light") {
