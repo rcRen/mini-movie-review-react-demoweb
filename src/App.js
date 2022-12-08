@@ -22,9 +22,9 @@ function App() {
     // </div>
     <>
       <Router>
-        <Header />
+        {/* <Header /> */}
         <Sidebar />
-        <div className='main' style={{ height: '100%' }}>
+        <div className='main'>
           <Routes>
             <Route path="/" element={<MovieHome />} />
             <Route path="/popular" element={<MoviePopular />} />
