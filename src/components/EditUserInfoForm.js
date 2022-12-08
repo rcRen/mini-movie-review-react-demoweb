@@ -1,6 +1,7 @@
+
 import React from "react";
 import { Form, Button, Row, Col, Container, Stack} from "react-bootstrap";
-import { useContext, useState } from 'react';
+import { useContext, useState, handleSubmit } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContex';
 import { User } from '../helpers/LocalStorage';
@@ -15,33 +16,30 @@ const EditUserInfoForm = () => {
 	// const [confirmPassword, setConfirmPassword] = useState();
 	const [message, setMessage] = useState('');
 
-	const handleSubmit = (e) => {
+	const fetchData = (e) => {
 		e.preventDefault();
-		fetch('http://localhost:3001/user/change-password', {
-			method: 'POST',
+		fetch('http://localhost:3001/user/change-profile', {
+			method: 'PUT',
 			body: JSON.stringify({
 				username,
 				email,
-				// oldPassword,
-				// newPassword,
-				// confirmPassword,
 			}),
 			headers: {
 				'Content-type': 'application/json; charset=UTF-8',
 			},
 		})
-			.then((res) => res.json())
-			.then((res) => {
-				console.info(res)
-				console.info(message)
-				if (!res.message) {
-					setMessage(res.message);
-				} else {
-					User.setUser(res.data);
+    .then((res) => res.json())
+    .then((res) => {
+      console.info(res)
+      console.info(message)
+      if (!res.message) {
+        setMessage(res.message);
+      } else {
+        User.setUser(res.data);
 
-					navigate('/');
-				}
-			});
+        navigate('/');
+      }
+    });
 	};
   return (
     <Container>
@@ -60,22 +58,18 @@ const EditUserInfoForm = () => {
             <Form onSubmit={handleSubmit}>
             
             <div><h3>Your logged Email is {email}</h3></div>
-              
-              <Form.Group controlId="name">
-                <Form.Label>Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Please input a new username"
-                  value={username}
-                  onChange={(e) => {
-                    setUsername(e.target.value);}}
-                ></Form.Control>
-              </Form.Group>
-             
-              {/* <Form.Group controlId="pic">
-                <Form.Label>Change Profile Picture</Form.Label>
-                <Form.Control type="file" />
-              </Form.Group> */}
+            
+            <Form.Group className="mb-5 mx-3" controlId="formBasicPassword">
+					<Form.Control
+						type="text"
+						placeholder="username"
+						value={user.username}
+						onChange={(e) => {
+							setUsername(e.target.value);
+						}}
+					/>
+				  </Form.Group>
+
               {(message==='') && (
                 <Form.Group className="mx-3 mb-5">
                 <Form.Text>{message}</Form.Text>
@@ -85,8 +79,8 @@ const EditUserInfoForm = () => {
                 Update
               </Button> */}
                 <Stack gap={2} className="col-md-5 mx-auto">
-                  <Button variant="secondary">Save changes</Button>
-                  <Button variant="outline-secondary">Cancel</Button>
+                  <Button  type="submit" variant="secondary">Save changes</Button>
+                  <Button button type="submit" onClick={navigate('/profile')} variant="outline-secondary">Cancel</Button>
                 </Stack>
             </Form>
           </Col>
