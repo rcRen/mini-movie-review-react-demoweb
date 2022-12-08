@@ -4,6 +4,7 @@ import "../App.css";
 import Button from "react-bootstrap/Button";
 import moment from "moment";
 import { Link } from "react-router-dom";
+import MyCard from "./UI/MyCard";
 
 function ReviewList() {
   const [data, setData] = useState([]);
@@ -40,6 +41,7 @@ function ReviewList() {
     // e.preventDefault();
     // alert(recordId);
     console.log({ recordId });
+
     fetch("http://localhost:3001/commandreviews/" + recordId, {
       method: "DELETE",
     })
@@ -51,7 +53,12 @@ function ReviewList() {
     } catch (error) {
       console.log(error);
     }
-  };
+  }
+  // useEffect(() => {
+  //   handleSubmit();
+  // }, []);
+
+  
 
   return (
     <div className="App">

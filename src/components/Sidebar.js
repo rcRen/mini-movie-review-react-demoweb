@@ -49,7 +49,7 @@ function Sidebar() {
           <hr style={{ width: "70%" }}></hr>
           <p style={{ fontSize: "1.5vw", color: "beige" }}>Recommends</p>
           <li className="navbar-button">
-            <Link to={"/movie1"}>
+            <Link to={"/movie/347201"}>
               <Button
                 className="nav-text"
                 style={{
@@ -62,7 +62,7 @@ function Sidebar() {
             </Link>
           </li>
           <li className="navbar-button">
-            <Link to="/movie2">
+            <Link to="/movie/1018">
               <Button
                 className="nav-text"
                 style={{
@@ -75,7 +75,7 @@ function Sidebar() {
             </Link>
           </li>
           <li className="navbar-button">
-            <Link to="/movie3">
+            <Link to="/movie/76600">
               <Button
                 className="nav-text"
                 style={{

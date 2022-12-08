@@ -8,8 +8,8 @@ import MyCard from "../components/UI/MyCard";
 import { User } from "../helpers/LocalStorage";
 
 function Identity() {
-  const { hash } = useLocation();
-
+  
+const { hash } = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {

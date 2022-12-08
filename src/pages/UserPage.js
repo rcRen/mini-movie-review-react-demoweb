@@ -1,17 +1,15 @@
 import React from "react";
 import { Form, Button, Row, Col, Container } from "react-bootstrap";
+import ReviewList from "../components/ReviewList";
 import Layout from "../layout/Layout";
 import "./UserPage.css";
-import "./UserPage.css";
-import {Container} from "react-bootstrap";
-import DisplayUserInfo from "../components/DisplayUserInfo";
 
 const UserPage = () => {
   return (
     <Layout>
       <Row className="profilePic">
         <Col md={{ span: 3, offset: 6 }}>
-          <img src="../images/person.png" />
+          <img src={'../images/person.png'} />
         </Col>
       </Row>
       <Row className="profileContainer">
@@ -62,9 +60,6 @@ const UserPage = () => {
         ></Col>
       </Row>
       </Layout>
-  //  <Container>
-  //   <DisplayUserInfo />
-  //   </Container>
   );
 };
 

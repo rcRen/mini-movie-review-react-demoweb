@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
-
+// movie_id; movie_name; user_id; user_name; 
 function AddReviewForm() {
   // const [isLoggedIn, setIsLoggedIn] = React.useContext(LoggedInContext);
   const [movieId, setMovieId] = useState(

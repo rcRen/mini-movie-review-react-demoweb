@@ -1,11 +1,12 @@
 import React from "react";
 import AddReviewForm from "../components/AddReviewForm";
+import Layout from "../layout/Layout";
 
 const AddReview = () => {
   return (
-    <div>
+    <Layout>
       <AddReviewForm />
-    </div>
+    </Layout>
   );
 };
 

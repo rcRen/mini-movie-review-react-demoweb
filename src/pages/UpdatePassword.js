@@ -1,7 +1,5 @@
 import React from "react";
-import { Col, Container, Row, Tabs, Tab } from "react-bootstrap";
-// import './UpdatePassword.css';
-// import Header from '../components/Header';
+import { Col } from "react-bootstrap";
 import ChangePasswordForm from "../components/ChangePasswordForm";
 import MyCard from "../components/UI/MyCard";
 import Layout from "../layout/Layout";

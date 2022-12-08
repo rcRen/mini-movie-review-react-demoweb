@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Row, Col } from "react-bootstrap";
 import MovieBox from "../components/MovieBox";
-// import Carousel from "../components/Carousel";
 import { useLocation } from "react-router-dom";
+import Layout from "../layout/Layout";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 const SearchHome = () => {
   const location = useLocation();
@@ -9,10 +13,10 @@ const SearchHome = () => {
   const API_SEARCH =
     "https://api.themoviedb.org/3/search/movie?api_key=287aa00fd9d0384e651f7f3865c5a54f&query";
   const [query, setQuery] = useState(location.state.query);
-  alert("searchome" + query);
+  // alert("searchome" + query);
   const [movies, setMovies] = useState([]);
   const url = `https://api.themoviedb.org/3/search/movie?api_key=287aa00fd9d0384e651f7f3865c5a54f&query=${query}`;
-  alert(url);
+  // alert(url);
   //   const searchMovie = async (e) => {
   //     e.preventDefault();
   //     console.log("Searching");
@@ -38,9 +42,9 @@ const SearchHome = () => {
   }, []);
 
   return (
-    <div>
-      {/* <Carousel /> */}
-      <div>
+    <Layout>
+      <Row>
+        <Col md={12} lg={12}>
         {movies.length > 0 ? (
           <div class="grid">
             {movies.map((movieReq, index) => (
@@ -50,8 +54,9 @@ const SearchHome = () => {
         ) : (
           <h2>Sorry!! No Movies Found</h2>
         )}
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Layout>
   );
 };
 
