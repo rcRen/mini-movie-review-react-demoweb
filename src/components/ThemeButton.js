@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Button } from "react-bootstrap";
+import * as GiIcons from 'react-icons/gi';
 
 function ThemeButton() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -15,9 +17,9 @@ function ThemeButton() {
   }, [theme]);
   return (
     <>
-      <div className={`App ${theme}`}>
-        <button onClick={toggleTheme}>Toggle Theme</button>
-      </div>
+      <Button variant="outline-warning" onClick={toggleTheme}>
+        <GiIcons.GiCardExchange style={{ width: '20px', height: '20px' }} />
+      </Button>
     </>
   );
 }
