@@ -92,7 +92,7 @@ function AddReviewForm() {
           <Form.Group className="my-3 mx-3" controlId="formBasicEmail">
             <Form.Control
               as="textarea"
-              rows={3}
+              rows={20}
               placeholder="Content Text"
               value={inputContentText}
               onChange={(e) => {
