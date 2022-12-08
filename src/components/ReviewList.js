@@ -108,22 +108,23 @@ function ReviewList() {
             <Col sm={2}>
               <h5 class="text-end">Comment:</h5>
             </Col>
-            <Col sm={8} />
+            <Col sm={8}>
+              <p
+                className="text-wrap text-start"
+                style={{ wordBreak: "break-all" }}
+              >
+                {item.content}
+              </p>
+            </Col>
           </Row>
-          <Row>
-            <Col sm={2} />
-            <Col sm={2}>{item.content}</Col>
-            <Col sm={8} />
-          </Row>
+
           <Row>
             <Col sm={2} />
             <Col sm={2}>
-              <h5>
-                {" "}
-                <Link to={"/edit/" + item._id}>
-                  <Button class="btn btn-primary btn-sm"> EDIT </Button>
-                </Link>
-              </h5>
+              {" "}
+              <Link to={"/edit/" + item._id}>
+                <Button class="btn btn-primary btn-sm"> EDIT </Button>
+              </Link>
             </Col>
             <Col sm={8}>
               <h5>
