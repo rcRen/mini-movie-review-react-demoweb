@@ -19,7 +19,7 @@ function ThemeButton() {
     <>
       <div className={`App ${theme}`}>
         {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
-        <p>Toggle Theme</p>
+        <span>Toggle Theme</span>
         {theme === "light" ? (
           <img
             alt=""

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Rating } from "react-simple-star-rating";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -6,21 +6,20 @@ import moment from "moment";
 import { useNavigate } from "react-router-dom";
 import MyCard from "./UI/MyCard";
 import { Row, Col } from "react-bootstrap";
+import { UserContext } from "../contexts/UserContex";
+import { User } from "../helpers/LocalStorage";
+
 // movie_id; movie_name; user_id; user_name;
 function AddReviewForm() {
-  // const [isLoggedIn, setIsLoggedIn] = React.useContext(LoggedInContext);
+  const user = useContext(UserContext);
   const [movieId, setMovieId] = useState(
     localStorage.getItem("movieId") || "307463"
   );
   const [movieName, setMovieName] = useState(
     localStorage.getItem("movieName") || "spider man2"
   );
-  const [userId, setUserId] = useState(
-    localStorage.getItem("userId") || "1234"
-  );
-  const [username, setUsername] = useState(
-    localStorage.getItem("username") || "user1"
-  );
+  const [userId, setUserId] = user.id;
+  const [username, setUsername] = user.username;
   const [inputContentText, setInputContentText] = useState();
   const [rating, setRating] = useState(0);
 
