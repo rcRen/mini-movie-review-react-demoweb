@@ -11,10 +11,12 @@ import {
     MDBTypography,
   } from "mdb-react-ui-kit";
 import AddReviewButton from '../components/AddReviewButton'
+import { User } from "../helpers/LocalStorage";
+
 
 function  MovieInfo() {
+    const userInfo = User.getUser();
     const { movie_id } = useParams();
-    // console.log('33333 '+movie_id);
     const API_URL =
       "https://api.themoviedb.org/3/movie/" +
       movie_id +
@@ -64,7 +66,6 @@ function  MovieInfo() {
                       IMDb: {movie.vote_average}
                     </span>
                     <span style={{ paddingLeft: "5px" }}>
-                      {/* Company: {movie.production_companies[0]} */}
                     </span>
                   </MDBTypography>
                   <MDBTypography tag="h6" style={{ paddingTop: "10px" }}>
@@ -75,7 +76,7 @@ function  MovieInfo() {
                   </div>
                   </MDBTypography>
                   <MDBTypography tag="h6" style={{ paddingTop: "10px" }}>
-                      <AddReviewButton />
+                      {userInfo?(<AddReviewButton />):null}
                   </MDBTypography>
 
                  

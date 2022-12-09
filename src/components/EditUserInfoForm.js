@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button, Row, Col, Container, Stack} from "react-bootstrap";
 import { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link} from 'react-router-dom';
 import { UserContext } from '../contexts/UserContex';
 import { User } from '../helpers/LocalStorage';
 
@@ -86,7 +86,9 @@ const EditUserInfoForm = () => {
               </Button> */}
                 <Stack gap={2} className="col-md-5 mx-auto">
                   <Button variant="secondary">Save changes</Button>
+                  <Link to='/profile'>
                   <Button variant="outline-secondary">Cancel</Button>
+                  </Link>
                 </Stack>
             </Form>
           </Col>

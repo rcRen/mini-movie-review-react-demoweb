@@ -39,8 +39,8 @@ export const FetchReviewData = ({
   const formateDate = updateDate.substring(0, 10);
   const formateTime = updateDate.substring(11, 19);
   return (
-    <Card className="mb-3">
-      <Card.Header>
+    <Card className="mb-3 text-black"  >
+      <Card.Header >
         <span>
           <b>{username}</b>
         </span>{" "}
