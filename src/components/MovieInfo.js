@@ -1,5 +1,7 @@
 import React,{ useState , useEffect} from 'react'
 import {Routes, Route, useNavigate, useParams} from 'react-router-dom'
+import { Movie } from "../helpers/LocalStorage";
+
 import {
     MDBCol,
     MDBContainer,
@@ -11,12 +13,10 @@ import {
     MDBTypography,
   } from "mdb-react-ui-kit";
 import AddReviewButton from '../components/AddReviewButton'
-import { User } from "../helpers/LocalStorage";
-
 
 function  MovieInfo() {
-    const userInfo = User.getUser();
     const { movie_id } = useParams();
+    // console.log('33333 '+movie_id);
     const API_URL =
       "https://api.themoviedb.org/3/movie/" +
       movie_id +
@@ -24,6 +24,7 @@ function  MovieInfo() {
     const API_IMG = "https://image.tmdb.org/t/p/w500";
   
     const [movie, setMovie] = useState({});
+
   
     useEffect(() => {
       fetch(API_URL)
@@ -32,6 +33,7 @@ function  MovieInfo() {
           setMovie(data);
         });
     }, []);
+
     return(
         <MDBContainer className="py-5 h-100">
         <MDBRow className="justify-content-center align-items-center h-100">
@@ -66,6 +68,7 @@ function  MovieInfo() {
                       IMDb: {movie.vote_average}
                     </span>
                     <span style={{ paddingLeft: "5px" }}>
+                      {/* Company: {movie.production_companies[0]} */}
                     </span>
                   </MDBTypography>
                   <MDBTypography tag="h6" style={{ paddingTop: "10px" }}>
@@ -76,7 +79,7 @@ function  MovieInfo() {
                   </div>
                   </MDBTypography>
                   <MDBTypography tag="h6" style={{ paddingTop: "10px" }}>
-                      {userInfo?(<AddReviewButton />):null}
+                      <AddReviewButton movieName = {movie.title}/>
                   </MDBTypography>
 
                  
@@ -105,6 +108,5 @@ function  MovieInfo() {
     )
                     }
 export default MovieInfo
-
 
 

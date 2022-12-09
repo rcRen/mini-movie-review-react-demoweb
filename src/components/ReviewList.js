@@ -149,10 +149,15 @@ function ReviewList() {
       method: "DELETE",
     })
       .then((data) => data.json())
-      .then((json) => alert(JSON.stringify(json)));
-
+      .then((json) => {
+        json.success
+          ? alert("Delete Review Successful")
+          : alert(JSON.stringify(json));
+      });
+    //
     try {
       navigate("/myreview", { replace: true });
+      // this.forceUpdate([true]);
     } catch (error) {
       console.log(error);
     }

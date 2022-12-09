@@ -59,7 +59,7 @@ function App() {
                 path="/user/update-password"
                 element={<UpdatePassword />}
               />
-              <Route path="/addreview" element={<AddReview />} />
+              <Route path="/addreview/:movie_id" element={<AddReview />} />
 
               <Route path="/edit/:id" element={<EditReview />} />
               <Route path="*" element={<NoPage />} />
