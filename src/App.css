@@ -43,9 +43,9 @@
 /* ------------ Start Here ------------ */
 
 .dark {
-  background-color: #333;
-  /* background-image: url('/public/images/bgimg-dark.jpg'); */
-  background-repeat: no-repeat;
+  /* background-color: #333; */
+  background-image: url('/public/images/bgimg-dark.jpg');
+  /* background-repeat: no-repeat; */
   background-size: cover;
   background-position: center;
   background-position: fixed;
@@ -53,9 +53,9 @@
 }
 
 .light {
-  background-color: #fff;
-  /* background-image: url('/public/images/bgimg.jpg'); */
-  background-repeat: no-repeat;
+  /* background-color: #fff; */
+  background-image: url('/public/images/bgimg.jpg');
+  /* background-repeat: no-repeat; */
   background-size: cover;
   background-position: center;
   background-position: fixed;
