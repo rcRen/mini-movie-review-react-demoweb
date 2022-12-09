@@ -21,11 +21,6 @@ import NoPage from "./pages/NoPage";
 import MovieReviewsDisplay from "./components/MovieReviewsDisplay";
 
 function App() {
-  // return(
-  // <>
-  // <MovieReviewsDisplay/>
-  // </>
-  // )
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const toggleTheme = () => {
     if (theme === "light") {

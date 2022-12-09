@@ -70,7 +70,7 @@ console.log('userId:' +userId);
     <div className="App">
       {/* <div> */}
       {data.map((item, index) => (
-        <MyCard key={item + index}>
+        <MyCard style={{backgroundColor:'#6c757d'}} key={item + index}>
           <Row>
             <Col sm={2} />
             <Col sm={2}>
