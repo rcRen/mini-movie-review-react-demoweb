@@ -36,7 +36,7 @@ function ThemeButton() {
             className="d-flex 
     justify-content-start m-3"
             width={"70px"}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", backgroundColor:'#fff !important'}}
             id="movie"
             onClick={() => toggleTheme()}
           />
@@ -48,7 +48,7 @@ function ThemeButton() {
   justify-content-start m-3"
             id="movie"
             width={"70px"}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", backgroundColor:'#333 !important' }}
             onClick={() => toggleTheme()}
           />
         )}
