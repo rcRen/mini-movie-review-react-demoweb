@@ -4,15 +4,14 @@ import { useContext, useState } from 'react';
 import { useNavigate , Link} from 'react-router-dom';
 import { UserContext } from '../contexts/UserContex';
 import { User } from '../helpers/LocalStorage';
+import CancelButton from "./CancelButton";
+
 
 const EditUserInfoForm = () => {
   const navigate = useNavigate();
 	const user = useContext(UserContext);
 	const email = user.email;
 	const [username, setUsername] = useState();
-	// const [oldPassword, setOldPassword] = useState();
-	// const [newPassword, setNewPassword] = useState();
-	// const [confirmPassword, setConfirmPassword] = useState();
 	const [message, setMessage] = useState('');
 
 	const handleSubmit = (e) => {
@@ -22,9 +21,6 @@ const EditUserInfoForm = () => {
 			body: JSON.stringify({
 				username,
 				email,
-				// oldPassword,
-				// newPassword,
-				// confirmPassword,
 			}),
 			headers: {
 				'Content-type': 'application/json; charset=UTF-8',
@@ -84,13 +80,13 @@ const EditUserInfoForm = () => {
               {/* <Button type="submit" varient="primary">
                 Update
               </Button> */}
+                
                 <Stack gap={2} className="col-md-5 mx-auto">
-                  <Button variant="secondary">Save changes</Button>
-                  <Link to='/profile'>
-                  <Button variant="outline-secondary">Cancel</Button>
-                  </Link>
+                  <Button  type="submit" variant="primary">Save changes</Button>
+                  <CancelButton />
                 </Stack>
             </Form>
+            
           </Col>
         </Row>
       </Container>
