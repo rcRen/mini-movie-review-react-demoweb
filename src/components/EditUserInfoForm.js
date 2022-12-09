@@ -11,51 +11,51 @@ const EditUserInfoForm = () => {
   const navigate = useNavigate();
 	const user = useContext(UserContext);
 	const email = user.email;
-	const [username, setUsername] = useState();
+  // const password = user.password;
+  // const avatar = user.avatar;
+	const [username, setUsername] = useState(user.username);
 	const [message, setMessage] = useState('');
 
-	const handleSubmit = (e) => {
+
+  const fetchData = (e) => {
 		e.preventDefault();
-		fetch('http://localhost:3001/user/change-password', {
+		fetch('http://localhost:3001/user/edit', {
 			method: 'POST',
 			body: JSON.stringify({
-				username,
-				email,
+				email: email,
+        username: username,
 			}),
 			headers: {
 				'Content-type': 'application/json; charset=UTF-8',
 			},
 		})
-			.then((res) => res.json())
-			.then((res) => {
-				console.info(res)
-				console.info(message)
-				if (!res.message) {
-					setMessage(res.message);
-				} else {
-					User.setUser(res.data);
-
-					navigate('/');
-				}
-			});
-	};
+    .then((res) => res.json())
+    .then((res) => {
+      if (!res.message) {
+        User.setUser(res.data);
+        navigate('/');
+      } else {
+        setMessage(res.message);
+      }
+    });
+  }
   return (
-    <Container>
+    <>
       <Row>
-        <Col md={{ span: 3, offset: 5 }}>
+        <Col md={{ span: 3, offset: 4 }}>
           <img src={'../images/person.png'} />
         </Col>
       </Row>
       <Row>
         <Col md={{ span: 6, offset: 4 }}>
-          <h1>Edit your information</h1>
+          <h1>Edit your Profile</h1>
         </Col>
       </Row>
        <Row>
           <Col md={{ span: 6, offset: 4 }}>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={fetchData}>
             
-            <div><h3>Your logged Email is {email}</h3></div>
+            <div><h3>Email : {email}</h3></div>
               
               <Form.Group controlId="name">
                 <Form.Label>Name</Form.Label>
@@ -67,20 +67,11 @@ const EditUserInfoForm = () => {
                     setUsername(e.target.value);}}
                 ></Form.Control>
               </Form.Group>
-             
-              {/* <Form.Group controlId="pic">
-                <Form.Label>Change Profile Picture</Form.Label>
-                <Form.Control type="file" />
-              </Form.Group> */}
               {(message==='') && (
-                <Form.Group className="mx-3 mb-5">
-                <Form.Text>{message}</Form.Text>
-                </Form.Group>
-              )}
-              {/* <Button type="submit" varient="primary">
-                Update
-              </Button> */}
-                
+					<Form.Group className="mx-3 mb-5">
+						<Form.Text>{message}</Form.Text>
+					</Form.Group>
+				)}
                 <Stack gap={2} className="col-md-5 mx-auto">
                   <Button  type="submit" variant="primary">Save changes</Button>
                   <CancelButton />
@@ -89,6 +80,6 @@ const EditUserInfoForm = () => {
             
           </Col>
         </Row>
-      </Container>
+      </>
   )};
 export default EditUserInfoForm;
