@@ -2,13 +2,13 @@
 import React from 'react';
 import {
     MDBCard,
-    // MDBCardImage,
     MDBCardBody,
     MDBCardText,
     MDBRow,
     MDBCol,
     MDBTypography
 } from 'mdb-react-ui-kit';
+import * as HiIcons from 'react-icons/hi';
 import Layout from '../layout/Layout';
 
 function About() {
@@ -46,23 +46,27 @@ function About() {
                         <MDBCard>
                             <div className="rounded-top d-flex flex-row" style={{ backgroundColor: 'gold', height: '70px' }}>
                                 <div className="ms-3" style={{ marginTop: '20px' }}>
-                                    <MDBTypography tag="h4" style={{ color: 'black' }}>Rucheng Ren</MDBTypography>
+                                    <MDBTypography tag="h4" style={{ color: 'black' }}>
+                                        <HiIcons.HiUserGroup />&nbsp;Rucheng Ren
+                                    </MDBTypography>
                                 </div>
                             </div>
                             <p></p>
                             <MDBCardBody className="text-black p-4">
                                 <div className="mb-5">
-                                    <p className="lead fw-normal mb-1" style={{ margin: '-20px 0' }}>Group Leader</p>
+                                    <p className="lead fw-normal mb-1" style={{ margin: '-20px 0' }}>
+                                        Group Leader
+                                    </p>
                                     <div className="p-4">
                                         <MDBCardText className="font-italic mb-1" style={{ margin: '-10px 0' }}>
                                             Main Tasks:
                                         </MDBCardText>
-                                        <MDBCardText className="font-italic mb-1" style={{ height: '150px' }}>
+                                        <MDBCardText className="font-italic mb-1" style={{ height: '120px' }}>
                                             <ul>
                                                 <li>Logo</li>
                                                 <li>Register/Login</li>
                                                 <li>Modify Password</li>
-                                                <li>Database Connection</li>
+                                                <li>DB Connection</li>
                                                 <li>Display Movies</li>
                                                 <li>Display Reviews</li>
                                                 <li>Local Storage</li>
@@ -77,18 +81,22 @@ function About() {
                         <MDBCard>
                             <div className="rounded-top d-flex flex-row" style={{ backgroundColor: 'lavender', height: '70px' }}>
                                 <div className="ms-3" style={{ marginTop: '20px' }}>
-                                    <MDBTypography tag="h4" style={{ color: 'black' }}>Xiaoming Su</MDBTypography>
+                                    <MDBTypography tag="h4" style={{ color: 'black' }}>
+                                        <HiIcons.HiUser />&nbsp;Xiaoming Su
+                                    </MDBTypography>
                                 </div>
                             </div>
                             <p></p>
                             <MDBCardBody className="text-black p-4">
                                 <div className="mb-5">
-                                    <p className="lead fw-normal mb-1" style={{ margin: '-20px 0' }}>Group Member</p>
+                                    <p className="lead fw-normal mb-1" style={{ margin: '-20px 0' }}>
+                                        Group Member
+                                    </p>
                                     <div className="p-4">
                                         <MDBCardText className="font-italic mb-1" style={{ margin: '-10px 0' }}>
                                             Main Tasks:
                                         </MDBCardText>
-                                        <MDBCardText className="font-italic mb-1" style={{ height: '150px' }}>
+                                        <MDBCardText className="font-italic mb-1" style={{ height: '120px' }}>
                                             <ul>
                                                 <li>User Page</li>
                                                 <li>View Profile</li>
@@ -112,18 +120,22 @@ function About() {
                         <MDBCard>
                             <div className="rounded-top d-flex flex-row" style={{ backgroundColor: 'lavender', height: '70px' }}>
                                 <div className="ms-3" style={{ marginTop: '20px' }}>
-                                    <MDBTypography tag="h4" style={{ color: 'black' }}>Zibin Guo</MDBTypography>
+                                    <MDBTypography tag="h4" style={{ color: 'black' }}>
+                                        <HiIcons.HiUser />&nbsp;Zibin Guo
+                                    </MDBTypography>
                                 </div>
                             </div>
                             <p></p>
                             <MDBCardBody className="text-black p-4">
                                 <div className="mb-5">
-                                    <p className="lead fw-normal mb-1" style={{ margin: '-20px 0' }}>Group Member</p>
+                                    <p className="lead fw-normal mb-1" style={{ margin: '-20px 0' }}>
+                                        Group Member
+                                    </p>
                                     <div className="p-4">
                                         <MDBCardText className="font-italic mb-1" style={{ margin: '-10px 0' }}>
                                             Main Tasks:
                                         </MDBCardText>
-                                        <MDBCardText className="font-italic mb-1" style={{ height: '150px' }}>
+                                        <MDBCardText className="font-italic mb-1" style={{ height: '120px' }}>
                                             <ul>
                                                 <li>View Reviews</li>
                                                 <li>Add Review</li>
@@ -144,26 +156,30 @@ function About() {
                         <MDBCard>
                             <div className="rounded-top d-flex flex-row" style={{ backgroundColor: 'lavender', height: '70px' }}>
                                 <div className="ms-3" style={{ marginTop: '20px' }}>
-                                    <MDBTypography tag="h4" style={{ color: 'black' }}>Qichen Zhu</MDBTypography>
+                                    <MDBTypography tag="h4" style={{ color: 'black' }}>
+                                        <HiIcons.HiUser />&nbsp;Qichen Zhu
+                                    </MDBTypography>
                                 </div>
                             </div>
                             <p></p>
                             <MDBCardBody className="text-black p-4">
                                 <div className="mb-5">
-                                    <p className="lead fw-normal mb-1" style={{ margin: '-20px 0' }}>Group Member</p>
+                                    <p className="lead fw-normal mb-1" style={{ margin: '-20px 0' }}>
+                                        Group Member
+                                    </p>
                                     <div className="p-4">
                                         <MDBCardText className="font-italic mb-1" style={{ margin: '-10px 0' }}>
                                             Main Tasks:
                                         </MDBCardText>
-                                        <MDBCardText className="font-italic mb-1" style={{ height: '150px' }}>
+                                        <MDBCardText className="font-italic mb-1" style={{ height: '120px' }}>
                                             <ul>
                                                 <li>Main Page</li>
                                                 <li>Sidebar</li>
                                                 <li>Home Carousel</li>
                                                 <li>Movie Box</li>
-                                                <li>Movie Page(pop-up)</li>
+                                                <li>Movie Modal</li>
                                                 <li>About Page</li>
-                                                <li>Recommend Movie</li>
+                                                <li>Recommends</li>
                                                 <li>3rd party API</li>
                                             </ul>
                                         </MDBCardText>
