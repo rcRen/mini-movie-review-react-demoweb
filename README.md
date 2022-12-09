@@ -34,6 +34,19 @@ npm i mdb-react-ui-kit
 "rsuite": "^5.23.1",
 "web-vitals": "^2.1.4"
 
+FrontEnd:
+-npm init
+-npm i react react-dom react-scripts
+-npm install
+-npm start
+-npm i react-simple-star-rating
+-npm i react-icons
+-npm i react-pro-sidebar
+-npm i mdb-react-ui-kit
+
+-npm i rsuite
+-npm i moment
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
