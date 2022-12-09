@@ -1,6 +1,6 @@
 import React,{ useState , useEffect} from 'react'
 import {Routes, Route, useNavigate, useParams} from 'react-router-dom'
-import { Movie } from "../helpers/LocalStorage";
+import { User} from "../helpers/LocalStorage";
 
 import {
     MDBCol,
@@ -15,6 +15,7 @@ import {
 import AddReviewButton from '../components/AddReviewButton'
 
 function  MovieInfo() {
+    const userInfo = User.getUser;
     const { movie_id } = useParams();
     // console.log('33333 '+movie_id);
     const API_URL =
@@ -79,7 +80,7 @@ function  MovieInfo() {
                   </div>
                   </MDBTypography>
                   <MDBTypography tag="h6" style={{ paddingTop: "10px" }}>
-                      <AddReviewButton movieName = {movie.title}/>
+                      <AddReviewButton/>
                   </MDBTypography>
 
                  

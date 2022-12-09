@@ -39,8 +39,9 @@ function AddReviewForm() {
   //   // localStorage.getItem("movieName") || "spider man2"
   //   movie.title
   // );
-  const [userId, setUserId] = user.id;
-  const [username, setUsername] = user.username;
+
+  const [userId, setUserId] = useState(user.id);
+  const [username, setUsername] = useState(user.username);
   const [inputContentText, setInputContentText] = useState();
   const [rating, setRating] = useState(0);
 
