@@ -12,15 +12,15 @@
 
 # install
 
-npm i react react-scripts react-dom/
-npm i react-bootstrap bootstrap/
-npm i react-simple-star-rating/
-npm i react-router reacter-router-dom/
-npm i resuite/
-npm i moment/
-npm i react-icons /
-npm i react-pro-sidebar/
-npm i mdb-react-ui-kit/
+npm i react react-scripts react-dom  
+npm i react-bootstrap bootstrap  
+npm i react-simple-star-rating  
+npm i react-router reacter-router-dom  
+npm i resuite  
+npm i moment  
+npm i react-icons  
+npm i react-pro-sidebar  
+npm i mdb-react-ui-kit  
 
 
 
