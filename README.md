@@ -1,5 +1,19 @@
 
+
+![localhost_3000_ (1)](/Users/rrc/projects/github/mini-movie-review-react-demoweb/assets/localhost_3000_ (1).png)
+
+
+
+![localhost_3000_movie_436270 (1)](/Users/rrc/projects/github/mini-movie-review-react-demoweb/assets/localhost_3000_movie_436270 (1).png)
+
+
+
+
+
+![localhost_3000_movie_436270](/Users/rrc/projects/github/mini-movie-review-react-demoweb/assets/localhost_3000_movie_436270.png)
+
 # install
+
 npm i react react-scripts react-dom
 npm i react-bootstrap bootstrap
 npm i react-simple-star-rating
